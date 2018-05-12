@@ -2478,7 +2478,7 @@
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color: black;
 		background-attachment: fixed,fixed;
 		background-image: url("images/overlay.png"), url("../../images/left_site2.PNG");
 		background-position: top left, top left;
@@ -2948,7 +2948,7 @@
 
 			#footer {
 				background-attachment: scroll;
-				background-color: #1f1815;
+				background-color: black;
 				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;

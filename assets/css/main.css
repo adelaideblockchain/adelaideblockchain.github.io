@@ -2018,7 +2018,6 @@
 				border-radius: 0.35em;
 				border: solid 3px rgba(255, 255, 255, 0.5);
 				color: #fff;
-				content: 'View';
 				display: inline-block;
 				font-size: 0.8em;
 				font-weight: 400;
@@ -3124,4 +3123,10 @@
 				padding-left: 0;
 			}
 
+	}
+
+	#mc_embed_signup{
+		background:#fff;
+		clear:left;
+		font:14px Helvetica,Arial,sans-serif;
 	}

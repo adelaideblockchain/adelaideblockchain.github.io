@@ -26,6 +26,67 @@ body, html {
 .w3-bar .w3-button {
     padding: 16px;
 }
+    
+
+    
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+    
 </style>
     
     
@@ -90,16 +151,39 @@ body, html {
 				<h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">our sponsors</h2>
 				<h5 class="font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Sponsors play an integral role _________</h5>
 				<div class="logo-slider row">
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+					
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="popup logo-image border-dim-gray bg-white margin-bottom-30" onclick="myFunction()">
+                            <span class="popuptext" id="myPopup">Insert Description about company! </span>
 							<img class="linear-transition opacity-30" src="Event_files/client-logo-1.png" alt="Logo 1">
 						</div>
-					</div>
+					</div>           
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+                    
+                    
+                    
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+						<div class="popup logo-image border-dim-gray bg-white margin-bottom-30" onclick="myFunction2()">
+                            <span class="popuptext" id="myPopup2">Insert Description about company2! </span>
 							<img class="linear-transition opacity-30" src="Event_files/client-logo-2.png" alt="Logo 2">
 						</div>
 					</div>
+                    
+<script>
+// When the user clicks on div, open the popup
+function myFunction2() {
+    var popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");
+}
+</script>
+                    
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
 						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
 							<img class="linear-transition opacity-30" src="Event_files/client-logo-3.png" alt="Logo 3">

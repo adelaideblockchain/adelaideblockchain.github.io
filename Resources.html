@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
-<html>
+
+<html><head>
 <title>Adelaide Blockchain</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,9 +26,71 @@ body, html {
 .w3-bar .w3-button {
     padding: 16px;
 }
+    
+
+    
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+    
 </style>
-   
-    <!-- Favicons -->
+    
+    
+<!-- Favicons -->
 <link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
     <!-- CSS files -->
@@ -45,7 +109,15 @@ body, html {
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
 <script src="js/jQuery.js"></script></head>
+    
+<body id="md-site-main-box" class="event" data-spy="scroll" data-offset="100" data-target="#md-site-navbar">
+	<div class="md-site-wraper">
 
+    
+    
+    
+    
+<body>
 	
 	
 
@@ -72,17 +144,53 @@ body, html {
   <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px"><span class="w3-jumbo w3-hide-small">Adelaide Blockchain </span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Adelaide Blockchain</span><br>
-    <p><span class="w3-large">a student run organisation</span></p>
-    <p><span class="w3-large">that creates awareness,</span></p>
-    <p><span class="w3-large">engages communities and provides education</span></p>
-    <p><span class="w3-large">about Blockchain technology.</span></p>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div> 
-  <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
+
+		<!-- call to action start -->
+		<section id="sponsers" class="logoshowcase-style-2 md-logoshowcase-section text-align-center width-100 float-left padding-tb-73-50">
+			<div class="container wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+        <p></p>
+				<h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Resources</h2>
+				<h5 class="font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Open source resources to help you get up to speed</h5>
+				<div class="logo-slider row">
+					
+                    
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+						  <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Books</a></p>
+            </div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Books</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+						  <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Media</a></p>
+            </div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Workshops</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Trading</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Token sales</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+							<p><a href="https://github.com/adelaideblockchain/education/tree/master/resources" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Development</a></p>
+						</div>
+					</div>
+				</div>
+				  <div class="w3-text-white w3-xlarge" style="position: absolute;">
       
     <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
     <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
@@ -90,6 +198,9 @@ body, html {
     <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
     <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
   </div>
+				
+			</div>
+		<!-- call to action end -->
 </header>
 
 

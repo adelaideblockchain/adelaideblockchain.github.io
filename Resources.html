@@ -18,7 +18,7 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: 100%, 100%;
-    background-image: url("assets/background.png");
+    background-image: linear-gradient(to bottom right, white , purple);
     min-height: 100%;
 	background-repeat: no-repeat;
 	background-origin: content-box;
@@ -26,7 +26,7 @@ body, html {
 .w3-bar .w3-button {
     padding: 16px;
 }
-    
+
 
     
 /* Popup container - can be anything you want */
@@ -124,9 +124,15 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <a href="websiteTest.html" class="w3-bar-item w3-button w3-wide">ADLBLC LOGO</a>
+    <!--<a href="websiteTest.html" class="w3-bar-item w3-button w3-wide" src="assets/clientLogo2.png"/a>
+    <div id="logo" data-bind="fadeVisible: !getActiveView().isShowLeftNeighbourColumnPossible()" class="" style="opacity: 1;"></div>-->
+    <a href="websiteTest.html"><img href="" class="w3-bar-item w3-button w3-wide" src="assets/adelBlockLogoFull.png" alt="Logo1"></a>
     <!-- Right-sided navbar links -->
+    <!--
     <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"><em class="fa fa-user"></em> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"><em class="fa fa-th"></em> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"><i style="font-size:24px" class="fa">&#xf20e;</i> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"><em class="fa fa-envelope"></em> CONTACT</a></div>
+    -->
+    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"> CONTACT</a></div>
+
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -144,11 +150,13 @@ body, html {
   <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-
 		<!-- call to action start -->
+
 		<section id="sponsers" class="logoshowcase-style-2 md-logoshowcase-section text-align-center width-100 float-left padding-tb-73-50">
 			<div class="container wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+        
         <p></p>
+
 				<h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Resources</h2>
 				<h5 class="font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Open source resources to help you get up to speed</h5>
 				<div class="logo-slider row">
@@ -192,17 +200,21 @@ body, html {
 				</div>
 				  <div class="w3-text-white w3-xlarge" style="position: absolute;">
       
-    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
-    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+
   </div>
-				
+				</div>
 			</div>
+      </div>
 		<!-- call to action end -->
 </header>
 
+    <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
+      <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+      <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+    </div>
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">

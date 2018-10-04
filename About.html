@@ -1,37 +1,44 @@
+
+
 <!DOCTYPE html>
 <html>
-<title>Adelaide Blockchain</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-body, html {
+  <title>Adelaide Blockchain</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body, html {
     height: 100%;
     line-height: 1.8;
-}
-/* Full height image header */
-/*
-.bgimg-1 {
+    }
+    /* Full height image header */
+    .bgimg-1 {
     background-position: center;
     background-size: 100%, 100%;
-    background-image: linear-gradient(to bottom right, white , purple);
+    background-image: linear-gradient(to bottom right, white , white); */
     min-height: 100%;
-	background-repeat: no-repeat;
-	background-origin: content-box;
-}
-*/
-.w3-bar .w3-button {
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    }
+    .bgimg-2 {
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url("assets/background3.png"); /*linear-gradient(to bottom right, white , purple); */
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    }
+    .w3-bar .w3-button {
     padding: 16px;
-}
-</style>
-   
-    <!-- Favicons -->
-<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
-    <!-- CSS files -->
+    }
+  </style>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+  <!-- CSS files -->
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="styles/animate.css">
   <link rel="stylesheet" type="text/css" href="styles/fontAwesome.css">
@@ -46,20 +53,20 @@ body, html {
   <link rel="stylesheet" type="text/css" href="styles/elements.css">
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
-  <link rel="stylesheet" href="styles/w3.css">
-  <link rel="stylesheet" href="styles/w3-theme-black.css">
-  <link rel="stylesheet" href="styles/font-awesome.css">
-<script src="js/jQuery.js"></script></head>
 
-	
-	
-
+  <script src="js/jQuery.js"></script></head>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <a href="WebsiteTest.html" class="w3-bar-item w3-button w3-wide">ADLBLC LOGO</a>
+    <!--<a href="websiteTest.html" class="w3-bar-item w3-button w3-wide" src="assets/clientLogo2.png"/a>
+    <div id="logo" data-bind="fadeVisible: !getActiveView().isShowLeftNeighbourColumnPossible()" class="" style="opacity: 1;"></div>-->
+    <a href="websiteTest.html"><img href="" class="w3-bar-item w3-button w3-wide" src="assets/adelBlockLogoFull.png" alt="Logo1"></a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small"><a href="About.html" class="w3-bar-item w3-button"><em class="fa fa-user"></em> ABOUT</a> <a href="Resources.html" class="w3-bar-item w3-button"><em class="fa fa-th"></em> RESOURCES</a> <a href="Sponsors.html" class="w3-bar-item w3-button"><i style="font-size:24px" class="fa">&#xf20e;</i> SPONSORS</a> <a href="Contact.html" class="w3-bar-item w3-button"><em class="fa fa-envelope"></em> CONTACT</a></div>
+    <!--
+    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"><em class="fa fa-user"></em> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"><em class="fa fa-th"></em> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"><i style="font-size:24px" class="fa">&#xf20e;</i> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"><em class="fa fa-envelope"></em> CONTACT</a></div>
+    -->
+    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"> CONTACT</a></div>
+
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -67,142 +74,139 @@ body, html {
     </a>
   </div>
 </div>
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="About.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="Resources.html" onclick="w3_close()" class="w3-bar-item w3-button">RESOURCES</a>
+    <a href="Sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">SPONSORS</a>
+    <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="About.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="Resources.html" onclick="w3_close()" class="w3-bar-item w3-button">RESOURCES</a>
-  <a href="Sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">SPONSORS</a>
-  <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
+  <!--<link rel="stylesheet" href="styles/w3.css">-->
+  <link rel="stylesheet" href="styles/w3-theme-black.css">
+  <link rel="stylesheet" href="styles/font-awesome.css">
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-   <div class="bgimg-1 ui vertical segment" style="padding: 8em 0em;">
+  <!-- Header with full-height image -->
+  <header class="" id="home">
 
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-  <!--  <h2 class="w3-wide">THE BAND</h2>
-    <p class="w3-opacity"><i>We love music</i></p> -->
-    
-    <h3 class="ui header" style="font-size: 2em;">What is this all about?</h3>
-    
-    <p style="font-size: 1.2em;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.</p>
-    
-    <p style="font-size: 1.2em;">The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.</p>
-
-    <p style="font-size: 1.2em;">The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.</p>
-
-    <p style="font-size: 1.2em;">As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. </p>
-
-    <p style="font-size: 1.2em;">We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
-
-    <h3 class="ui header" style="font-size: 2em;">What we do</h3>
-
-    <h4 class="ui header" style="color: dimgray">Research and Development</h4>
-    <p style="font-size: 1.2em;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
-
-    <h4 class="ui header" style="color: dimgray">Education</h4>
-    <p style="font-size: 1.2em;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
-
-
-    <div class="w3-row w3-padding-32">
-    </div>
-  </div>
-
-
-<!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
-<h2>OUR TEAM</h2>
-<p>Meet the team - our office rats:</p>
-
-<div class="w3-row"><br>
-
-<div class="w3-quarter">
-  <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Johnny Walker</h3>
-  <p>Web Designer</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Rebecca Flex</h3>
-  <p>Support</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Jan Ringo</h3>
-  <p>Boss man</p>
-</div>
-
-<div class="w3-quarter">
-  <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Kai Ringo</h3>
-  <p>Fixer</p>
-</div>
-
-  <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
+    <div class="bgimg-1 ui vertical segment" style="padding: 8em 0em;">
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <!--  <h2 class="w3-wide">THE BAND</h2>
+        <p class="w3-opacity"><i>We love music</i></p> -->
       
-    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
-    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
-  </div>
-</header>
+      <h3 class="ui header" style="font-size: 2em;">What is this all about?</h3>
+      <p></p>
+
+      <p style="font-size: 1.2em;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.</p>
+
+      <p style="font-size: 1.2em;">The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.</p>
+
+      <p style="font-size: 1.2em;">The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.</p>
+
+      <p style="font-size: 1.2em;">As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. </p>
+
+      <p style="font-size: 1.2em;">We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
+
+      <h3 class="ui header" style="font-size: 2em;">What we do</h3>
+
+      <p></p>
 
 
+      <h5 class="ui header" style="color: dimgray">Research and Development</h5>
 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+      <p style="font-size: 1.2em;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
+      <h5 class="ui header" style="color: dimgray">Education</h5>
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+      <p style="font-size: 1.2em;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
 
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
+    </div>
+    <div class="bgimg-2 ui vertical segment" style="padding: 8em 0em;">
+    <!-- Team Container -->
+    <div class="w3-container w3-padding-64 w3-center" id="team">
+    <h3>OUR TEAM</h3>
+    <p>Meet the team - our office rats:</p>
+    <div class="w3-row">
+    <br>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Johnny Walker</h5>
+      <p>Web Designer</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Rebecca Flex</h5>
+      <p>Support</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Jan Ringo</h5>
+      <p>Boss man</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Kai Ringo</h5>
+      <p>Fixer</p>
+    </div>
+    <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
+      <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+      <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+    </div>
+  </header>
+  <!-- Add Google Maps -->
+  <script>
+    function myMap()
+    {
+      myCenter=new google.maps.LatLng(41.878114, -87.629798);
+      var mapOptions= {
+        center:myCenter,
+        zoom:12, scrollwheel: false, draggable: false,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+    
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
     }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-
-</body>
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
+        }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <!--
+    To use this code on your website, get a free API key from Google.
+    Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+    -->
+  </body>
 </html>
+

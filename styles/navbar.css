@@ -1,0 +1,43 @@
+/** set up our navbar, and position it fixed so there is no white gap above the CS content **/
+
+.navbar {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: background 0.7s ease-out;
+  background: transparent!important;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/** this is where you can set the background color of your header after it passes the hero image **/
+
+.x-navbar.pasthero {
+    border-bottom: 1px solid #ccc;
+    background-color: #fff!important;
+    box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/** and this is where you can set the nav link colour after the navbar has passed the hero image **/
+
+.x-navbar.pasthero a, .x-navbar.pasthero .desktop .x-nav > li > a {
+  color: #000!important;
+}
+.x-navbar .desktop .sub-menu {
+  background: transparent;
+  font-size: 16px;
+}
+.x-navbar-fixed-top .desktop .sub-menu {
+  background: #fff!important;
+}
+.x-brand:hover, .x-brand:focus {
+    color: inherit;
+}
+.entry-content {
+  margin-top: 0;
+}

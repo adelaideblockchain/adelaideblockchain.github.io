@@ -7,10 +7,46 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: "Raleway";
+  }
 body, html {
     height: 100%;
     line-height: 1.8;
+}
+
+hr {
+    background-color:yellow;
+    border-color: yellow;
+    margin-top: 0px;
+    margin-right: 300px;
+    height: 50px;
+    width: 495px;
+    border: 0px;
+}
+
+.button {
+  border-radius: 10px;
+  background-color:#7289da;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 16px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #7289da;
+  border-color: black;
+  border: 4px solid;
+  color: white;
 }
 /* Full height image header */
 .bgimg-1 {
@@ -22,16 +58,28 @@ body, html {
 	background-origin: content-box;
 }
 .w3-bar .w3-button {
-    padding: 16px;
+    padding: 16px 24px;
 }
+
+.navbar-logo {
+  padding-left: 64px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  width: 250px;
+  height: auto;
+}
+
+.navbar-right {padding-right: 96px;padding-top: 24px; padding-bottom: 16px}
+
+.navbar-item {width:100%;text-align:middle; padding-top: 32px; padding-left: 16px; padding-right: 16px; font-size: 14px; color: white}
 
 .bgimg-2 {
     background-position: bottom;
     background-size: auto;
-    background-image: url("assets/background.png");
+    background-color: grey;
     min-height: auto;
-	background-repeat: no-repeat;
-	background-origin: content-box;
+  	background-repeat: no-repeat;
+  	background-origin: content-box;
 }
 </style>
    
@@ -53,25 +101,26 @@ body, html {
   <link rel="stylesheet" type="text/css" href="styles/elements.css">
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
-<script src="js/jQuery.js"></script></head>
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
 
-	
-	
+<script src="js/navbar_slide.js"></script>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <!--<a href="websiteTest.html" class="w3-bar-item w3-button w3-wide" src="assets/clientLogo2.png"/a>
-    <div id="logo" data-bind="fadeVisible: !getActiveView().isShowLeftNeighbourColumnPossible()" class="" style="opacity: 1;"></div>-->
-    <a href="websiteTest.html"><img href="" class="w3-bar-item w3-button w3-wide" src="assets/adelBlockLogoFull.png" alt="Logo1"></a>
-    <!-- Right-sided navbar links -->
-    <!--
-    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"><em class="fa fa-user"></em> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"><em class="fa fa-th"></em> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"><i style="font-size:24px" class="fa">&#xf20e;</i> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"><em class="fa fa-envelope"></em> CONTACT</a></div>
-    -->
-    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"> CONTACT</a></div>
+  <div class="navbar" id="navbar">
+    <!-- Logo -->
+    <a href="websiteTest.html">
+      <img style="width: 120px; height: auto" class="navbar-logo" src="assets/logo_solo.png" alt="Logo1">
+    </a>
+  
+    <div class="navbar-right">
+      <a href="about.html" class="navbar-item"> About</a> 
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Contact</a>
+    </div>
 
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
@@ -81,23 +130,33 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">RESOURCES</a>
-  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">SONSORS</a>
-  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container " id="home"> <!-- w3-grayscale-min-->
-  <div class="w3-display-left w3-text-white" style="padding:48px"><span class="w3-jumbo w3-hide-small">Adelaide Blockchain </span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Adelaide Blockchain</span><br>
-    <p><span class="w3-large">a student run organisation</span></p>
-    <p><span class="w3-large">that creates awareness,</span></p>
-    <p><span class="w3-large">engages communities and provides education</span></p>
-    <p><span class="w3-large">about Blockchain technology.</span></p>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Join as member!</a></p>
+<header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
+  <div class="w3-text-white" style="padding-top: 300px; padding-left: 128px";>
+
+    <span>
+
+      <img style="width: 500px; height: auto;" class="img" src="assets/logo.png"></img>
+
+    </span><br>
+    <span class="w3-xlarge">   a student run Blockchain non-for-profit ...</span>
+    <hr style="border: 2px solid yellow">
+    <span id="demo" class="w3-xlarge"></span>
+  
+
+   
+
+    <p><a href="https://discord.gg/33UGqfk" class="button">JOIN OUR COMMUNITY
+      <img style="padding-left: 0px; width: 100px; height: auto;" src="assets/discord.jpg"></img>
+    </a></p>
   </div> 
-  <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
+  <div class="w3-display-bottomright w3-text-white w3-xlarge" style="padding: 48px 32px">
       
     <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
     <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
@@ -122,6 +181,7 @@ body, html {
 <!------Footer--->
 
 <footer align="center"class="bgimg-2 w3-container-centre">
+  <h1 style="color: white; font-size: 48px; text-align: center;"> Our Sponsors and Partners</h1>
     <div class="item-split copy">
         <div align="center" class="is-centre">
          <a href="sponsors.html" ><img class="linear-transition opacity-30" src="assets/clientLogo1.png" alt="Logo 1"></a>
@@ -135,6 +195,77 @@ body, html {
 
 <!-- Add Google Maps -->
 <script>
+
+var intCursor = 0;
+var intChar = 0;
+var intErase = 0;
+var str = 0;
+
+var txt = ['building developer ecosystems and the Adelaide Blockchain community ...',
+'scaling education of the new decentralised world ...',
+'folstering exceptional Blockchain projects ...',
+'networking globally, connecting like-minded, talented individuals ...']
+
+var timer = 7000;
+
+var speed = 50;
+
+<!--Typewrite code-->
+
+(function() {typeWriter();})();
+
+function typeWriter() {
+      if (intChar < txt[str].length) {
+       document.getElementById("demo").innerHTML += txt[str].charAt(intChar);
+       intChar++;
+       setTimeout(typeWriter, speed);
+      }
+      else {
+
+        intErase = txt[str].length-1;
+        setTimeout(erase, 3000);
+        typeCursor();
+        setTimeout(typeCursor, 400);
+        setTimeout(typeCursor, 800);
+        setTimeout(typeCursor, 1200);
+        setTimeout(typeCursor, 1600);
+        setTimeout(typeCursor, 2000);
+        setTimeout(typeCursor, 2400);
+        setTimeout(typeCursor, 2800);
+        }
+
+       
+} 
+
+function erase() {
+  if(intErase >= 0) {
+   var orig = document.getElementById("demo").innerHTML;
+   var res = orig.slice(0,-1);
+   document.getElementById("demo").innerHTML = res;
+ 
+   intErase--;
+   setTimeout(erase, 30);
+  }
+  else {
+    str++;
+    intChar=0;
+    typeWriter();
+  }
+}
+
+function eraseCursor() {
+  var orig = document.getElementById("demo").innerHTML;
+  var res = orig.slice(0,-1);
+  document.getElementById("demo").innerHTML = res;
+}
+
+function typeCursor() {
+  document.getElementById("demo").innerHTML += '|';
+  setTimeout(eraseCursor, 200);
+}
+
+
+
 function myMap()
 {
   myCenter=new google.maps.LatLng(41.878114, -87.629798);

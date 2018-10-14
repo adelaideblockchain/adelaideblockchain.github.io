@@ -3,109 +3,65 @@
 <title>Adelaide Blockchain</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-
-@font-face {
-    font-family: 'carisma_classic600_demibold';
-    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
-         url('carismaclassic-600-demibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 body,h1,h2,h3,h4,h5,h6,div,span {
-  font-family: 'carisma_classic600_demibold';
+  font-family: "Raleway";
   }
 body, html {
-    height: 100%; 
+    height: 100%;
     line-height: 1.8;
 }
 
-br {
-  margin: 3px;
-}
 header {
-    border-bottom-left-radius: 60% 30%;
-    border-bottom-right-radius: 60% 30%;
- 
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    background-color: 
 }
 
-.typewriter {
-  font-family: courier;
-  font: bold italic;
+hr {
+    background-color:yellow;
+    border-color: yellow;
+    margin-top: 0px;
+    margin-right: 300px;
+    height: 50px;
+    width: 495px;
+    border: 0px;
 }
 
 .button {
   border-radius: 10px;
-  border: 4px solid;
-  padding: 0px 12px;
+  background-color:#7289da;
+  border: none;
+  color: white;
+  padding: 10px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  padding-top: 6px;
+  margin: 16px 2px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.button-discord {
-  background-color: transparent;
-  border-color: white; 
-  color: white;
-}
-.button-meetup {
-  background-color: transparent;
-  border-color: white; 
-  color: white;
-}
-.button-facebook {
-  background-color: transparent;
-  border-color: white; 
-  color: white;
-}
-
-.linebottom {
-    width:100%; 
-    text-align:center; 
-    border-bottom: 3px solid yellow; 
-    line-height:0.1em; 
-    margin:10px 0 30px; 
-}
-
-.button-discord:hover {
+.button:hover {
   background-color: #7289da;
-  border-color: red;
+  border-color: black;
   border: 4px solid;
   color: white;
 }
-.button-meetup:hover {
-  background-color: white;
-  border-color: #ed1c40;
-  border: 4px solid;
-  color: #ed1c40;
-}
-.button-facebook:hover {
-  background-color: #7289da;
-  border-color: red;
-  border: 4px solid;
-  color: white;
-}
-
 /* Full height image header */
 .bgimg-1 {
-  background-position: center;
-  background-size: 100%, 100%;
-  background-image: url("assets/background.png");
-  min-height: 100%;
-  background-repeat: no-repeat;
-  background-origin: content-box;
+    background-position: center;
+    background-size: 100%, 100%;
+    background-image: url("assets/background.png");
+    min-height: 100%;
+	background-repeat: no-repeat;
+	background-origin: content-box;
 }
 .w3-bar .w3-button {
     padding: 16px 24px;
@@ -114,10 +70,10 @@ header {
 .bgimg-2 {
     background-position: bottom;
     background-size: auto;
-    background-color: white;  
+    background-color: white;
     min-height: auto;
-    background-repeat: no-repeat;
-    background-origin: content-box;
+  	background-repeat: no-repeat;
+  	background-origin: content-box;
 }
 </style>
    
@@ -140,10 +96,6 @@ header {
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
   <link rel="stylesheet" type="text/css" href="styles/navbar.css">
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
-
-  
-
 
 <script src="js/navbar_slide.js"></script>
 
@@ -152,7 +104,7 @@ header {
   <div class="navbar" id="navbar">
     <!-- Logo -->
     <a href="websiteTest.html">
-      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+      <img style="width: 120px; height: auto" class="navbar-logo" src="assets/logo_solo.png" alt="Logo1">
     </a>
   
     <div class="navbar-right">
@@ -179,41 +131,77 @@ header {
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
-  <div class="w3-text-white" style="padding-top: 340px; padding-left: 128px";>
-
-    <span class="w3-xxxlarge padding-right-500 linebottom">ADELAIDE BLOCKCHAIN</span><br><br>
-    <span class="w3-xlarge padding-right-500" style="margin-top: 12px;"> a student run Blockchain non-for-profit based in South Australia</span><br>
-
-    <div style="margin-top: 12px;">
-      <a href="https://discord.gg/33UGqfk" class="button button-discord">JOIN OUR COMMUNITY
-       <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/discord.png"></img>
-     </a>
-      <a href="https://www.meetup.com/Adelaide-Blockchain/" class="button button-meetup">COME TO OUR EVENTS
-       <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/meetup.png"></img>
-      </a>
-      <a href="https://www.facebook.com/adelaideblockchain/" class="button button-facebook">JOIN US ON FACEBOOK
-       <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/facebook.png"></img>
-     </a><br>
-
-   </div>
-
-    <br>
-
-    <span id="demo" class="w3-xlarge typewriter"></span>
-
-  </div> 
-  
-  <div class="w3-display-bottomright w3-text-white w3-xlarge" style="padding: 30px 32px">
+<header class="" id="home"> <!-- w3-grayscale-min-->
+  <div class="ui vertical segment" style="padding: 8em 0em;">
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <!--  <h2 class="w3-wide">THE BAND</h2>
+        <p class="w3-opacity"><i>We love music</i></p> -->
       
+      <h3 class="ui header" style="font-size: 2em;">What is this all about?</h3>
+      <p></p>
+
+      <p style="font-size: 1.2em;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.</p>
+
+      <p style="font-size: 1.2em;">The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.</p>
+
+      <p style="font-size: 1.2em;">The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.</p>
+
+      <p style="font-size: 1.2em;">As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. </p>
+
+      <p style="font-size: 1.2em;">We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
+
+      <h3 class="ui header" style="font-size: 2em;">What we do</h3>
+
+      <p></p>
+
+
+      <h5 class="ui header" style="color: dimgray">Research and Development</h5>
+
+      <p style="font-size: 1.2em;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
+
+      <h5 class="ui header" style="color: dimgray">Education</h5>
+
+      <p style="font-size: 1.2em;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
+
+
+    </div>
+    <div class="bgimg-2 ui vertical segment" style="padding: 8em 0em;">
+    <!-- Team Container -->
+    <div class="w3-container w3-padding-64 w3-center" id="team">
+    <h3>OUR TEAM</h3>
+    <p>Meet the team - our office rats:</p>
+    <div class="w3-row">
+    <br>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Johnny Walker</h5>
+      <p>Web Designer</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Rebecca Flex</h5>
+      <p>Support</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Jan Ringo</h5>
+      <p>Boss man</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="assets/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Kai Ringo</h5>
+      <p>Fixer</p>
+    </div>
+
+    <div class="w3-display-bottomright w3-text-white w3-xlarge" style="padding: 24px 32px">
     <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
     <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
     <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
     <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
     <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
   </div>
-
-</header>
+  </header>
 
 
 <!-- Modal for full size images on click-->
@@ -224,21 +212,6 @@ header {
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
-
-
-<!------Footer--->
-
-<footer align="center"class="bgimg-2 w3-container-centre">
-  <h1 style="color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
-    <div class="item-split copy">
-        <div align="center" class="is-centre">
-         <a href="sponsors.html" ><img class="linear-transition" src="assets/wanchain.png" alt="Logo 1"></a>
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a><a href="sponsors.html" ><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/blueblock.png" alt="Logo 4"></a>
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>
-        </div>
-    </div>
-</footer>
 
 
 
@@ -264,12 +237,7 @@ var speed = 50;
 (function() {typeWriter();})();
 
 function typeWriter() {
-      if(str == 4) {
-        window.alert(str);
-          str = 0;
-          typeWriter();
-      }
-      else if (intChar < txt[str].length) {
+      if (intChar < txt[str].length) {
        document.getElementById("demo").innerHTML += txt[str].charAt(intChar);
        intChar++;
        setTimeout(typeWriter, speed);

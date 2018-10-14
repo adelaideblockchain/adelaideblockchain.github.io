@@ -12,32 +12,14 @@
   right: 0;
 }
 
-/** this is where you can set the background color of your header after it passes the hero image **/
-
-.x-navbar.pasthero {
-    border-bottom: 1px solid #ccc;
-    background-color: #fff!important;
-    box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
-    -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+.navbar-logo {
+  padding-left: 64px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  width: 250px;
+  height: auto;
 }
 
-/** and this is where you can set the nav link colour after the navbar has passed the hero image **/
+.navbar-right {padding-right: 96px;padding-top: 24px; padding-bottom: 16px}
 
-.x-navbar.pasthero a, .x-navbar.pasthero .desktop .x-nav > li > a {
-  color: #000!important;
-}
-.x-navbar .desktop .sub-menu {
-  background: transparent;
-  font-size: 16px;
-}
-.x-navbar-fixed-top .desktop .sub-menu {
-  background: #fff!important;
-}
-.x-brand:hover, .x-brand:focus {
-    color: inherit;
-}
-.entry-content {
-  margin-top: 0;
-}
+.navbar-item {width:100%;text-align:middle; padding-top: 32px; padding-left: 16px; padding-right: 16px; font-size: 14px; color: white}

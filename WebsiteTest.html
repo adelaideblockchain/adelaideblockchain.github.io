@@ -101,7 +101,7 @@ header {
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
-  background-size: 100%, 100%;
+  background-size: auto, auto;
   background-image: url("assets/background.png");
   min-height: 100%;
   background-repeat: no-repeat;
@@ -119,6 +119,7 @@ header {
     background-repeat: no-repeat;
     background-origin: content-box;
 }
+    
 </style>
    
     <!-- Favicons -->
@@ -150,12 +151,13 @@ header {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="navbar" id="navbar">
+      
     <!-- Logo -->
     <a href="websiteTest.html">
       <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
     </a>
   
-    <div class="navbar-right">
+    <div class="navbar-right w3-hide-small ">
       <a href="about.html" class="navbar-item"> About</a> 
       <a href="resources.html" class="navbar-item"> Resources</a>
       <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
@@ -170,7 +172,7 @@ header {
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
   <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
@@ -265,7 +267,7 @@ var speed = 50;
 
 function typeWriter() {
       if(str == 4) {
-        window.alert(str);
+        //window.alert(str);
           str = 0;
           typeWriter();
       }
@@ -290,6 +292,23 @@ function typeWriter() {
 
        
 } 
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+    
 
 function erase() {
   if(intErase >= 0) {

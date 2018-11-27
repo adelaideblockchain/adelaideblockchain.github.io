@@ -3,35 +3,120 @@
 <title>Adelaide Blockchain</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: 'carisma_classic600_demibold';
+  }
 body, html {
-    height: 100%;
+    height: 100%; 
     line-height: 1.8;
 }
+
+br {
+  margin: 3px;
+}
+header {
+    border-bottom-left-radius: 60% 30%;
+    border-bottom-right-radius: 60% 30%;
+ 
+}
+
+
+
 /* Full height image header */
 .bgimg-1 {
-    background-position: center;
-    background-size: 100%, 100%;
-    background-image: url("assets/background.png");
-    min-height: 100%;
-	background-repeat: no-repeat;
-	background-origin: content-box;
+  background-position: center;
+  background-size: auto, auto;
+  background-image: url("assets/background.png");
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 .w3-bar .w3-button {
-    padding: 16px;
+    padding: 16px 24px;
 }
 
-
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.bgimg-2 {
+    background-position: bottom;
+    background-size: auto;
+    background-color: white;  
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
 
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
 </style>
    
     <!-- Favicons -->
@@ -52,25 +137,29 @@ input {
   <link rel="stylesheet" type="text/css" href="styles/elements.css">
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
-<script src="js/jQuery.js"></script></head>
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
-	
-	
+  
+<script src="js/navbar_slide.js"></script>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card" id="myNavbar">
-    <!--<a href="websiteTest.html" class="w3-bar-item w3-button w3-wide" src="assets/clientLogo2.png"/a>
-    <div id="logo" data-bind="fadeVisible: !getActiveView().isShowLeftNeighbourColumnPossible()" class="" style="opacity: 1;"></div>-->
-    <a href="websiteTest.html"><img href="" class="w3-bar-item w3-button w3-wide" src="assets/adelBlockLogoFull.png" alt="Logo1"></a>
-    <!-- Right-sided navbar links -->
-    <!--
-    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"><em class="fa fa-user"></em> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"><em class="fa fa-th"></em> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"><i style="font-size:24px" class="fa">&#xf20e;</i> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"><em class="fa fa-envelope"></em> CONTACT</a></div>
-    -->
-    <div class="w3-right w3-hide-small"><a href="about.html" class="w3-bar-item w3-button"> ABOUT</a> <a href="resources.html" class="w3-bar-item w3-button"> RESOURCES</a> <a href="sponsors.html" class="w3-bar-item w3-button"> SPONSORS</a> <a href="contact.html" class="w3-bar-item w3-button"> CONTACT</a></div>
+  <div class="navbar" id="navbar">
+      
+    <!-- Logo -->
+    <a href="websiteTest.html">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+    </a>
+  
+    <div class="navbar-right w3-hide-small ">
+      <a href="about.html" class="navbar-item"> About</a> 
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Contact</a>
+    </div>
 
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
@@ -78,12 +167,12 @@ input {
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">RESOURCES</a>
-  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">SONSORS</a>
-  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
 
 <!-- Header with full-height image -->

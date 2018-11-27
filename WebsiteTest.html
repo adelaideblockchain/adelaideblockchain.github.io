@@ -19,12 +19,15 @@
 
 }
 
-body,h1,h2,h3,h4,h5,h6,div,span {
+body,header,h1,h2,h3,h4,h5,h6,div,span {
   font-family: 'carisma_classic600_demibold';
   }
-body, html {
-    height: 100%; 
-    line-height: 1.8;
+    
+ 
+body,header,html {
+/*Change heigh to 100% to make it become big again. This currently makes it more mobile friendly*/
+    height: inherit;      
+    line-height: normal;
 }
 
 br {
@@ -181,11 +184,13 @@ header {
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
-  <div class="w3-text-white" style="padding-top: 340px; padding-left: 128px";>
 
-    <span class="w3-xxxlarge padding-right-500 linebottom">ADELAIDE BLOCKCHAIN</span><br><br>
-    <span class="w3-xlarge padding-right-500" style="margin-top: 12px;"> a student run Blockchain non-for-profit based in South Australia</span><br>
+<header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
+  <div class="w3-container w3-content w3-text-white" style="padding-top: 250px; padding-left: 128px max-width:800px">
+  <!---<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band"> --->
+
+    <span class="w3-display-mobile w3-xxxlarge padding-right-500 linebottom">ADELAIDE BLOCKCHAIN</span><br><br><br><br>
+    <span class="w3-display-mobile w3-xlarge padding-right-500" style="margin-top: 12px;"> a student run Blockchain non-for-profit based in South Australia</span><br>
 
     <div style="margin-top: 12px;">
       <a href="https://discord.gg/33UGqfk" class="button button-discord">JOIN OUR COMMUNITY
@@ -205,8 +210,8 @@ header {
     <span id="demo" class="w3-xlarge typewriter"></span>
 
   </div> 
-  
-  <div class="w3-display-bottomright w3-text-white w3-xlarge" style="padding: 30px 32px">
+  &nbsp;&nbsp;
+  <div class="w3-display-mobile w3-text-white w3-xlarge" style="padding: 30px 32px">
       
     <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
     <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
@@ -230,13 +235,14 @@ header {
 
 <!------Footer--->
 
-<footer align="center"class="bgimg-2 w3-container-centre">
+<footer align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
   <h1 style="color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
     <div class="item-split copy">
         <div align="center" class="is-centre">
-         <a href="sponsors.html" ><img class="linear-transition" src="assets/wanchain.png" alt="Logo 1"></a>
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a><a href="sponsors.html" ><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/blueblock.png" alt="Logo 4"></a>
+         <a href="sponsors.html" ><img class="linear-transition" src="assets/wanchain.png" alt="Logo 1"></a>&nbsp;&nbsp;&nbsp;
+            <a href="sponsors.html" ><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;
+            <a href="sponsors.html" ><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;
+            <a href="sponsors.html" ><img class="linear-transition" src="assets/blueblock.png" alt="Logo 4"></a>&nbsp;&nbsp;&nbsp;
             <a href="sponsors.html" ><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>
         </div>
     </div>
@@ -244,7 +250,7 @@ header {
 
 
 
-<!-- Add Google Maps -->
+
 <script>
 
 var intCursor = 0;
@@ -261,8 +267,8 @@ var timer = 7000;
 
 var speed = 50;
 
-<!--Typewrite code-->
-
+<!--------typeWriter-------->
+    
 (function() {typeWriter();})();
 
 function typeWriter() {

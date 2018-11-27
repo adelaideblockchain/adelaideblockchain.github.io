@@ -3,65 +3,49 @@
 <title>Adelaide Blockchain</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
+
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body,h1,h2,h3,h4,h5,h6,div,span {
-  font-family: "Raleway";
+  font-family: 'carisma_classic600_demibold';
   }
 body, html {
-    height: 100%;
+    height: 100%; 
     line-height: 1.8;
 }
 
+br {
+  margin: 3px;
+}
 header {
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-    background-color: 
+    border-bottom-left-radius: 60% 30%;
+    border-bottom-right-radius: 60% 30%;
+ 
 }
 
-hr {
-    background-color:yellow;
-    border-color: yellow;
-    margin-top: 0px;
-    margin-right: 300px;
-    height: 50px;
-    width: 495px;
-    border: 0px;
-}
 
-.button {
-  border-radius: 10px;
-  background-color:#7289da;
-  border: none;
-  color: white;
-  padding: 10px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 16px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
-.button:hover {
-  background-color: #7289da;
-  border-color: black;
-  border: 4px solid;
-  color: white;
-}
 /* Full height image header */
 .bgimg-1 {
-    background-position: center;
-    background-size: 100%, 100%;
-    background-image: url("assets/background.png");
-    min-height: 100%;
-	background-repeat: no-repeat;
-	background-origin: content-box;
+  background-position: center;
+  background-size: auto, auto;
+  background-image: url("assets/background.png");
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 .w3-bar .w3-button {
     padding: 16px 24px;
@@ -70,11 +54,69 @@ hr {
 .bgimg-2 {
     background-position: bottom;
     background-size: auto;
-    background-color: white;
+    background-color: white;  
     min-height: auto;
-  	background-repeat: no-repeat;
-  	background-origin: content-box;
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
 </style>
    
     <!-- Favicons -->
@@ -96,18 +138,21 @@ hr {
   <link rel="stylesheet" type="text/css" href="styles/base.css">
   <link rel="stylesheet" type="text/css" href="styles/media.css">
   <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
+  
 <script src="js/navbar_slide.js"></script>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="navbar" id="navbar">
+      
     <!-- Logo -->
     <a href="websiteTest.html">
-      <img style="width: 120px; height: auto" class="navbar-logo" src="assets/logo_solo.png" alt="Logo1">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
     </a>
   
-    <div class="navbar-right">
+    <div class="navbar-right w3-hide-small ">
       <a href="about.html" class="navbar-item"> About</a> 
       <a href="resources.html" class="navbar-item"> Resources</a>
       <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
@@ -122,7 +167,7 @@ hr {
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
   <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
@@ -130,7 +175,9 @@ hr {
   <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
 </nav>
 
-<!-- Header with full-height image -->
+
+
+	<!-- Header with full-height image -->
 <header class="" id="home"> <!-- w3-grayscale-min-->
   <div class="ui vertical segment" style="padding: 8em 0em;">
     <!-- The Band Section -->
@@ -166,7 +213,7 @@ hr {
 
 
     </div>
-    <div class="bgimg-2 ui vertical segment" style="padding: 8em 0em;">
+    <div class="bgimg-2 ui vertical segment">
     <!-- Team Container -->
     <div class="w3-container w3-padding-64 w3-center" id="team">
     <h3>OUR TEAM</h3>
@@ -204,6 +251,7 @@ hr {
   </header>
 
 
+
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -214,78 +262,25 @@ hr {
 </div>
 
 
-
 <!-- Add Google Maps -->
 <script>
 
-var intCursor = 0;
-var intChar = 0;
-var intErase = 0;
-var str = 0;
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
 
-var txt = ['building developer ecosystems and the Adelaide Blockchain community ...',
-'scaling education of the new decentralised world ...',
-'folstering exceptional Blockchain projects ...',
-'networking globally, connecting like-minded, talented individuals ...']
-
-var timer = 7000;
-
-var speed = 50;
-
-<!--Typewrite code-->
-
-(function() {typeWriter();})();
-
-function typeWriter() {
-      if (intChar < txt[str].length) {
-       document.getElementById("demo").innerHTML += txt[str].charAt(intChar);
-       intChar++;
-       setTimeout(typeWriter, speed);
-      }
-      else {
-
-        intErase = txt[str].length-1;
-        setTimeout(erase, 3000);
-        typeCursor();
-        setTimeout(typeCursor, 400);
-        setTimeout(typeCursor, 800);
-        setTimeout(typeCursor, 1200);
-        setTimeout(typeCursor, 1600);
-        setTimeout(typeCursor, 2000);
-        setTimeout(typeCursor, 2400);
-        setTimeout(typeCursor, 2800);
-        }
-
-       
-} 
-
-function erase() {
-  if(intErase >= 0) {
-   var orig = document.getElementById("demo").innerHTML;
-   var res = orig.slice(0,-1);
-   document.getElementById("demo").innerHTML = res;
- 
-   intErase--;
-   setTimeout(erase, 30);
-  }
-  else {
-    str++;
-    intChar=0;
-    typeWriter();
-  }
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
 }
 
-function eraseCursor() {
-  var orig = document.getElementById("demo").innerHTML;
-  var res = orig.slice(0,-1);
-  document.getElementById("demo").innerHTML = res;
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
 }
-
-function typeCursor() {
-  document.getElementById("demo").innerHTML += '|';
-  setTimeout(eraseCursor, 200);
-}
-
 </script>
+
 </body>
 </html>

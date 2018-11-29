@@ -105,7 +105,11 @@ header {
 .bgimg-1 {
   background-position: center;
   background-size: auto, auto;
-  background-image: url("assets/background.png");
+  /*background-image: url("assets/background.png");*/
+  
+  /*<!---Utilising a gradient for reduced load-time--->*/
+
+  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
   min-height: 100%;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -238,9 +242,9 @@ header {
 <footer align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
   <h1 style="color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
     <div class="item-split copy">
+      <br>
         <div align="center" class="is-centre">
-         <a href="sponsors.html" ><img class="linear-transition" src="assets/wanchain.png" alt="Logo 1"></a>&nbsp;&nbsp;&nbsp;
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;
+             <a href="sponsors.html" ><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;
             <a href="sponsors.html" ><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;
             <a href="sponsors.html" ><img class="linear-transition" src="assets/blueblock.png" alt="Logo 4"></a>&nbsp;&nbsp;&nbsp;
             <a href="sponsors.html" ><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>

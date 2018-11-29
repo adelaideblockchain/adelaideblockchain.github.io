@@ -59,6 +59,41 @@ header {
     background-repeat: no-repeat;
     background-origin: content-box;
 }
+    .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1/*#bc9dc8*/;
+}
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
@@ -138,6 +173,14 @@ header {
 				<h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Resources</h2>
 				<h5 class="font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Open source resources to help you get up to speed</h5>
 				<div class="logo-slider row">
+                    
+                    
+            <button class="collapsible">Recordings of previously delivered lectures:</button>
+                    <div class="content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRe-4sgfaGjzBvuJf9FMHWwwLjQbYH0Az" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>INSERT DESCRIPTION HERE</p>
+
+                    </div>    
 					
                     
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
@@ -181,10 +224,7 @@ header {
 
   </div>
 				</div>
-			</div>
-      </div>
-		<!-- call to action end -->
-</header>
+            
 
     <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
       <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
@@ -206,31 +246,23 @@ header {
 
 <!-- Add Google Maps -->
 <script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
+    
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
   });
-  marker.setMap(map);
 }
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
+    
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 

@@ -1918,3 +1918,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04747e', end
 .progress{ height: 4px; border-radius: 0px; padding: 0; margin-bottom: 21px; overflow:visible; background-color: #e8e8f9; -webkit-box-shadow: none; box-shadow: none; border: none; }
 .progress-bar { float: left; width: 0; height: 100%; font-size: 12px; line-height: 20px; color: #fff; text-align: center; background-color: #f6ab36; -webkit-box-shadow: none; box-shadow: none; -webkit-transition: width .6s ease; -o-transition: width .6s ease; transition: width .6s ease; }
 .progressText { font-size: 16px; font-weight: 600; color: #000; text-transform: capitalize; margin-bottom: 12px; display: inline-block; }
+
+.surrounding-typewriter {
+    display: flex;
+    height: 100px;
+}
+
+@media (max-width: 1024px) {
+	.surrounding-typewriter {
+		height: 50px;
+	}
+}
+
+@media (max-width: 900px) {
+    .surrounding-typewriter {
+        height: 80px;
+    }
+}
+
+@media (max-width: 800px) {
+    .surrounding-typewriter {
+        height: 70px;
+    }
+}
+
+@media (max-width: 660px) {
+    .surrounding-typewriter {
+        height: 90px;
+    }
+}

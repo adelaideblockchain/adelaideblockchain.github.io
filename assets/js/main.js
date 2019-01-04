@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
 	Helios by HTML5 UP
+=======
+	Strata by HTML5 UP
+>>>>>>> fee7035c5a9cbaa62af6e7efdb0e941e3d4bb1e3
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -8,27 +12,51 @@
 
 	var settings = {
 
+<<<<<<< HEAD
 		// Carousels
 			carousels: {
 				speed: 4,
 				fadeIn: true,
 				fadeDelay: 250
 			},
+=======
+		// Parallax background effect?
+			parallax: true,
+
+		// Parallax factor (lower = more intense, higher = less intense).
+			parallaxFactor: 10
+>>>>>>> fee7035c5a9cbaa62af6e7efdb0e941e3d4bb1e3
 
 	};
 
 	skel.breakpoints({
+<<<<<<< HEAD
 		wide: '(max-width: 1680px)',
 		normal: '(max-width: 1280px)',
 		narrow: '(max-width: 960px)',
 		narrower: '(max-width: 840px)',
 		mobile: '(max-width: 736px)'
+=======
+		xlarge: '(max-width: 1800px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)'
+>>>>>>> fee7035c5a9cbaa62af6e7efdb0e941e3d4bb1e3
 	});
 
 	$(function() {
 
+<<<<<<< HEAD
 		var	$window = $(window),
 			$body = $('body');
+=======
+		var $window = $(window),
+			$body = $('body'),
+			$header = $('#header'),
+			$footer = $('#footer'),
+			$main = $('#main');
+>>>>>>> fee7035c5a9cbaa62af6e7efdb0e941e3d4bb1e3
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -37,13 +65,29 @@
 				$body.removeClass('is-loading');
 			});
 
+<<<<<<< HEAD
 		// CSS polyfills (IE<9).
 			if (skel.vars.IEVersion < 9)
 				$(':last-child').addClass('last-child');
+=======
+		// Touch?
+			if (skel.vars.mobile) {
+
+				// Turn on touch mode.
+					$body.addClass('is-touch');
+
+				// Height fix (mostly for iOS).
+					window.setTimeout(function() {
+						$window.scrollTop($window.scrollTop() + 1);
+					}, 0);
+
+			}
+>>>>>>> fee7035c5a9cbaa62af6e7efdb0e941e3d4bb1e3
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
+<<<<<<< HEAD
 		// Prioritize "important" elements on mobile.
 			skel.on('+mobile -mobile', function() {
 				$.prioritize(
@@ -243,6 +287,67 @@
 					});
 
 			});
+=======
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
+				$.prioritize(
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
+				);
+			});
+
+		// Footer.
+			skel.on('+medium', function() {
+				$footer.insertAfter($main);
+			});
+
+			skel.on('-medium !medium', function() {
+				$footer.appendTo($header);
+			});
+
+		// Header.
+
+			// Parallax background.
+
+				// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+					if (skel.vars.browser == 'ie'
+					||	skel.vars.mobile)
+						settings.parallax = false;
+
+				if (settings.parallax) {
+
+					skel.on('change', function() {
+
+						if (skel.breakpoint('medium').active) {
+
+							$window.off('scroll.strata_parallax');
+							$header.css('background-position', 'top left, center center');
+
+						}
+						else {
+
+							$header.css('background-position', 'left 0px');
+
+							$window.on('scroll.strata_parallax', function() {
+								$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+							});
+
+						}
+
+					});
+
+					$window.on('load', function() {
+						$window.triggerHandler('scroll');
+					});
+
+				}
+
+		// Main Sections: Two.
+
+			// Lightbox gallery.
+				$window.on('load', function() {
+				});
+>>>>>>> fee7035c5a9cbaa62af6e7efdb0e941e3d4bb1e3
 
 	});
 

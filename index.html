@@ -28,6 +28,7 @@ body,header,html {
 /*Change heigh to 100% to make it become big again. This currently makes it more mobile friendly*/
     height: inherit;      
     line-height: normal;
+    scroll-behavior: smooth;
 }
 
 br {
@@ -37,6 +38,16 @@ header {
     border-bottom-left-radius: 60% 30%;
     border-bottom-right-radius: 60% 30%;
  
+}
+
+footer{
+
+  border-top-left-radius: 60% 30%;
+  border-top-right-radius: 60% 30%;
+  position: static;
+  width: 100%;
+  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  color: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
 }
 
 .typewriter {
@@ -127,6 +138,24 @@ header {
     background-repeat: no-repeat;
     background-origin: content-box;
 }
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
     
 </style>
    
@@ -166,7 +195,7 @@ header {
     </a>
   
     <div class="navbar-right w3-hide-small ">
-      <a href="about.html" class="navbar-item"> About</a> 
+      <a href="#aboutSec" class="navbar-item"> About</a> 
       <a href="resources.html" class="navbar-item"> Resources</a>
       <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
       <a href="contact.html" class="navbar-item"> Contact</a>
@@ -191,7 +220,7 @@ header {
 <!-- Header with full-height image -->
 
 <header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
-  <div class="w3-container w3-content w3-text-white" style="padding-top: 400px; padding-left: 128px max-width:800px">
+  <div class="w3-container w3-content w3-text-white" style="padding-top: 200px;  padding-bottom: 450px;">
   <!---<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band"> --->
 
     <span class="w3-display-mobile w3-xxxlarge padding-right-500 linebottom">ADELAIDE BLOCKCHAIN</span><br><br><br><br>
@@ -218,16 +247,8 @@ header {
 
   </div> 
   &nbsp;&nbsp;
-  <div class="w3-display-mobile w3-text-white w3-xlarge" style="padding: 30px 32px">
-      
-    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
-    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
-  </div>
-
-</header>
+ 
+ </header>
 
 
 <!-- Modal for full size images on click-->
@@ -240,20 +261,154 @@ header {
 </div>
 
 
-<!------Footer--->
+<!------Sponsors --->
 
-<footer align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
-  <h1 style="color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
+<div align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
+  <h1 style="padding-top: 100px; color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
     <div class="item-split copy">
       <br>
         <div align="center" class="is-centre">
-             <a href="sponsors.html" ><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/blueblock.png" alt="Logo 4"></a>&nbsp;&nbsp;&nbsp;
-            <a href="sponsors.html" ><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>
+             <a href="http://bitfwd.com/"><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://consensys.net/"><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.adelaide.edu.au/thinclab/home"><img class="linear-transition" src="assets/ThincLabLogo.png" alt="Logo 4"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.dispatchlabs.io/"><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>
         </div>
     </div>
-</footer>
+</div>
+
+
+<!----About section---->
+  <div class="ui vertical segment" style="padding: 8em 0em;">
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="aboutSec">
+      
+      <h1 class="ui header" style="font-size: 48px;">What is this all about?</h1>
+      <p></p>
+
+      <p style="font-size: 1.2em;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.</p>
+
+      <p style="font-size: 1.2em;">The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.</p>
+
+      <p style="font-size: 1.2em;">The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.</p>
+
+      <p style="font-size: 1.2em;">As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. </p>
+
+      <p style="font-size: 1.2em;">We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
+
+      <h3 class="ui header" style="font-size: 2em;">What we do</h3>
+
+      <p></p>
+
+
+      <h5 class="ui header" style="color: dimgray">Research and Development</h5>
+
+      <p style="font-size: 1.2em;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
+
+      <h5 class="ui header" style="color: dimgray">Education</h5>
+
+      <p style="font-size: 1.2em;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
+
+
+    </div>
+  </div>
+
+    <div class="bgimg-2 ui vertical segment">
+    <!-- Team Container -->
+    <div class="w3-container w3-padding-64 w3-center" id="team">
+    <h3>OUR TEAM</h3>
+    <p style="font-size:1.2em">Meet the team - Adelaide Blockchain's board memebers:</p>
+    <div class="w3-row">
+    <br>
+    <div class="w3-quarter">
+        <a href="https://www.linkedin.com/in/paulpounendis/"><img src="assets/Avatar_P.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity"></a>
+      <h5>Paul Pounendis</h5>
+      <p>President</p>
+    </div>
+    <div class="w3-quarter">
+      <a href="https://www.linkedin.com/in/ivansearanunes/"><img src="assets/Avatar_I.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity"><a/>
+      <h5>Ivan Seara Nunes</h5>
+      <p>Co-head of R&D</p>
+    </div>
+    <div class="w3-quarter">
+       <a href="https://www.linkedin.com/in/barbaravrettos/"><img src="assets/Avatar_B.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity"><a/>
+      <h5>Barbara Vrettos</h5>
+      <p>Head of External Communications</p>
+    </div>
+    <div class="w3-quarter">
+      <a href="https://www.linkedin.com/in/ruslan-mugalimov-79b041169/"><img src="assets/Avatar_R.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Ruslan Mugalimov</h5>
+          <p>Co-head of Marketting</p></a>
+    </div>
+    <div class="w3-quarter">
+        <a href="https://www.linkedin.com/in/sarahjamieson7/"><img src="assets/Avatar_S.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity"></a>
+      <h5>Sarah Jamieson</h5>
+      <p>Co-head of Marketting</p>
+    </div> 
+    <div class="w3-quarter">
+      <img src="assets/Avatar_N.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h5>Daniel Nguyen</h5>
+      <p>Co-head of R&D</p>
+    </div>    
+
+    <div class="w3-display-bottomright w3-text-white w3-xlarge" style="padding: 24px 32px">
+    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+  </div>
+  </div>
+</a>
+</div>
+</a>
+</div>
+
+
+
+  <!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4" style="padding-top: 50px">
+
+   <h4 style="padding-top: 50px; color: white; font-size: 25px; text-align: center; margin-top: 32px;"  > Become a part of Adelaide Blockchain</h4><br><br>
+
+   <div style=" text-align: center;" class="w3-text-white w3-xxlarge">
+    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+  </div><br><br>
+
+    <!-- Footer Elements -->
+
+
+    <div class="container">
+
+      <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Have any questions?</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="contact.html" class="btn  btn-rounded">Contact Us!</a>
+      </li>
+    </ul>
+    <br><br>
+      <!-- Call to action -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+ <div class="footer-copyright text-center py-3" style="color: white">© 2018 Copyright:
+      <a href="https://adelaideblockchain.org.au">Adelaide Blockchain</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
 
 
 
@@ -351,5 +506,4 @@ function typeCursor() {
 }
 
 </script>
-</body>
 </html>

@@ -1,114 +1,471 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Adelaide Blockchain - Home</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-	</head>
-	<body id="top">
+<title>Adelaide Blockchain</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<h1><strong>Adelaide Blockchain</strong>, a student run organisation that creates awareness, engages communities and provides education about
-			Blockchain technology.</h1>
-		</div>
-	</header>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 
-	<!-- Main -->
-		<div id="main">
 
-			<!-- One -->
-				<section id="one">
-					<header class="major align-center">
-						<h2>About Us</h2>
-					</header>
-					<p class="align-center">
-					Blockchain is a technology that provides true, peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.<br/><br/>The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.<br/><br/>The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.<br/><br/>As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. <br/><br/>We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.
-					</p>
-				</section>
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-			<!-- Two -->
-				<section id="two">
-					<h2>What We Do</h2>
-					<div class="row">
-						<article class="6u 12u$(xsmall) work-item">
-							<div class="image fit thumb"><img src="images/thumbs/RandD.jpg" alt="" /></div>
-							<h3>Research and Development</h3>
-							<p>We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects. </p>
-						</article>
-						<article class="6u$ 12u$(xsmall) work-item">
-							<div class="image fit thumb"><img src="images/thumbs/KickOff.jpg" alt="" /></div>
-							<h3>Education</h3>
-							<p>Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.  </p>
-						</article>
-					</div>
-				</section>
+}
 
-			<!-- Three -->
-	<!-- Begin MailChimp Signup Form -->
-	<div id="mc_embed_signup">
-		<form action="https://facebook.us18.list-manage.com/subscribe/post?u=ff5b8a3b5b7bff72cd48b3dbd&amp;id=824f646861" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-			<div id="mc_embed_signup_scroll">
-				<h2>Subscribe to our mailing list</h2>
-				<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-				<div class="mc-field-group">
-					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-				</label>
-					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-				</div>
-				<div class="mc-field-group">
-					<label for="mce-FNAME">First Name </label>
-					<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-				</div>
-				<div class="mc-field-group">
-					<label for="mce-LNAME">Last Name </label>
-					<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-				</div>
-				<div class="mc-field-group">
-					<label for="mce-MMERGE5">(Optional) Writeup on your interest in Blockchain! </label>
-					<input type="text" value="" name="MMERGE5" class="" id="mce-MMERGE5">
-				</div>
-				<div id="mce-responses" class="clear">
-					<div class="response" id="mce-error-response" style="display:none"></div>
-					<div class="response" id="mce-success-response" style="display:none"></div>
-				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ff5b8a3b5b7bff72cd48b3dbd_824f646861" tabindex="-1" value=""></div>
-				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-			</div>
-		</form>
+body,header,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: 'carisma_classic600_demibold';
+  }
+    
+ 
+body,header,html {
+/*Change heigh to 100% to make it become big again. This currently makes it more mobile friendly*/
+    height: inherit;      
+    line-height: normal;
+    scroll-behavior: smooth;
+}
+
+br {
+  margin: 3px;
+}
+header {
+    border-bottom-left-radius: 60% 30%;
+    border-bottom-right-radius: 60% 30%;
+ 
+}
+
+
+
+footer{
+
+  border-top-left-radius: 60% 30%;
+  border-top-right-radius: 60% 30%;
+  position: static;
+  width: 100%;
+  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  color: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+}
+
+.typewriter {
+  font-family: courier;
+  font: bold italic;
+}
+
+.button {
+  border-radius: 10px;
+  border: 4px solid;
+  padding: 0px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding-top: 6px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button-discord {
+  background-color: transparent;
+  border-color: white; 
+  color: white;
+}
+.button-meetup {
+  background-color: transparent;
+  border-color: white; 
+  color: white;
+}
+.button-facebook {
+  background-color: transparent;
+  border-color: white; 
+  color: white;
+}
+
+.linebottom {
+    width:100%; 
+    text-align:center; 
+    border-bottom: 3px solid yellow; 
+    line-height: 60px; 
+    margin:10px 0 30px; 
+}
+
+.button-discord:hover {
+  background-color: #7289da;
+  border-color: red;
+  border: 4px solid;
+  color: white;
+}
+.button-meetup:hover {
+  background-color: white;
+  border-color: #ed1c40;
+  border: 4px solid;
+  color: #ed1c40;
+}
+.button-facebook:hover {
+  background-color: #7289da;
+  border-color: red;
+  border: 4px solid;
+  color: white;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: auto, auto;
+  /*background-image: url("assets/background.png");*/
+  
+  /*<!---Utilising a gradient for reduced load-time--->*/
+
+  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  min-height: auto;
+  max-height: auto;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.w3-bar .w3-button {
+    padding: 16px 24px;
+}
+
+.bgimg-2 {
+    background-position: bottom;
+    background-size: auto;
+    background-color: white;  
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+</style>
+   
+    <!-- Favicons -->
+<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+    <!-- CSS files -->
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/fontAwesome.css">
+  <link rel="stylesheet" type="text/css" href="styles/ionicons.css">
+  <link rel="stylesheet" type="text/css" href="styles/slick.css">
+  <link rel="stylesheet" type="text/css" href="styles/jQuery.css">
+  <link rel="stylesheet" type="text/css" href="styles/magnificPopup.css">
+  <link rel="stylesheet" type="text/css" href="styles/nouiSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/simplyCountdown.css">
+  <link rel="stylesheet" type="text/css" href="styles/timeCircles.css">
+  <link rel="stylesheet" type="text/css" href="styles/elements.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/media.css">
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  
+
+
+<script src="js/navbar_slide.js"></script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" id="navbar">
+      
+    <!-- Logo -->
+    <a href="index.html">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+    </a>
+  
+    <div class="navbar-right w3-hide-small ">
+      <a href="#aboutSec" class="navbar-item"> About</a> 
+      <a href="team.html" class="navbar-item"> Team</a> 
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Contact</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+</nav>
+
+<!-- Header with full-height image -->
+
+<header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
+  <div class="w3-container w3-content w3-text-white" style="padding-top: 200px;  padding-bottom: 450px;">
+  <!---<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band"> --->
+
+    <span class="w3-display-mobile w3-xxxlarge padding-right-500 linebottom">ADELAIDE BLOCKCHAIN</span><br><br><br><br>
+    <span class="w3-display-mobile w3-xlarge padding-right-500" style="margin-top: 12px;"> a student run Blockchain non-for-profit based in South Australia</span><br>
+
+    <div style="margin-top: 12px;">
+      <a href="https://discord.gg/33UGqfk" class="button button-discord">JOIN OUR COMMUNITY
+       <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/discord.png"></img>
+     </a>
+      <a href="https://www.meetup.com/Adelaide-Blockchain/" class="button button-meetup">COME TO OUR EVENTS
+       <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/meetup.png"></img>
+      </a>
+      <a href="https://www.facebook.com/adelaideblockchain/" class="button button-facebook">JOIN US ON FACEBOOK
+       <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/facebook.png"></img>
+     </a><br>
+
+   </div>
+
+    <br>
+
+	<div class="surrounding-typewriter">
+      <span id="demo" class="w3-xlarge typewriter"></span>
 	</div>
-	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-	<!--End mc_embed_signup-->
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://twitter.com/adelblockchain" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/adelaideblockchain" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:adelaideblockchain@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						<li><a href="https://facebook.com/adelaideblockchain" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://linkedin.com/company/adelaideblockchain" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					</ul>
-				</div>
-			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+  </div> 
+  &nbsp;&nbsp;
+ 
+ </header>
 
-	</body>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<!----About section---->
+  <div class="ui vertical segment" style="padding-top: 50px" >
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px; " id="aboutSec">
+      
+      <h1 class="ui header" style="font-size: 48px; text-align: left;">What is this all about?</h1>
+      <p></p>
+
+      <p style="font-size: 1.2em; text-align: left;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.<br><br>
+
+      The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.<br><br>
+	  <img src="assets/WorkshopImg.jpg" alt="Workshop" align="right" width="640" height="480" style="margin-left: 20px; margin-bottom: 20px;" > 
+    
+      The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.<br><br>
+
+      As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. <br><br>
+
+      We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
+
+    </div>
+  </div>
+
+  <div class="ui vertical segment" style="padding-bottom: 50px; padding-top: 50px; background:gainsboro; border-bottom-left-radius: 60% 30%; border-bottom-right-radius: 60% 30%; border-top-left-radius: 60% 30%; border-top-right-radius: 60% 30%; "  >
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px; " id="aboutSec">
+      
+      <h1 class="ui header" style="font-size: 48px; text-align: right;">What we do</h1>
+
+      <p></p>
+
+ <img src="assets/LectureImg.jpg" alt="Lecture" align="left" width="640" height="480" style="margin-right: 20px; margin-bottom: 20px;" >
+
+      <h5 class="ui header" style="color: black; text-align: right;">Research and Development</h5>
+
+      <p style="font-size: 1.2em; text-align: right;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
+
+      <h5 class="ui header" style="color: black; text-align: right;">Education</h5>
+
+      <p style="font-size: 1.2em; text-align: right;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
+
+
+    </div>
+  </div>
+
+
+<!------Sponsors --->
+
+<div align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
+  <h1 style="padding-bottom: 50px; color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
+    <div class="item-split copy">
+      <br>
+        <div align="center" class="is-centre">
+             <a href="http://bitfwd.com/"><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://consensys.net/"><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.adelaide.edu.au/thinclab/home"><img class="linear-transition" src="assets/ThincLabLogo.png" alt="Logo 4"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.dispatchlabs.io/"><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4" style="padding-top: 50px">
+
+   <h4 style="padding-top: 50px; color: white; font-size: 25px; text-align: center; margin-top: 32px;"  > Become a part of Adelaide Blockchain</h4><br><br>
+
+   <div style=" text-align: center;" class="w3-text-white w3-xxlarge">
+    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+  </div><br><br>
+
+    <!-- Footer Elements -->
+
+
+    <div class="container">
+
+      <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Have any questions?</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="contact.html" class="btn  btn-rounded">Contact Us!</a>
+      </li>
+    </ul>
+    <br><br>
+      <!-- Call to action -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+ <div class="footer-copyright text-center py-3" style="color: white">© 2018 Copyright:
+      <a href="https://adelaideblockchain.org.au">Adelaide Blockchain</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
+
+
+<script>
+
+var intCursor = 0;
+var intChar = 0;
+var intErase = 0;
+var str = 0;
+
+var txt = ['building developer ecosystems and the Adelaide Blockchain community ...',
+'scaling education of the new decentralised world ...',
+'folstering exceptional Blockchain projects ...',
+'networking globally, connecting like-minded, talented individuals ...']
+
+var timer = 7000;
+
+var speed = 50;
+
+<!--------typeWriter-------->
+    
+(function() {typeWriter();})();
+
+function typeWriter() {
+      if(str == 4) {
+        //window.alert(str);
+          str = 0;
+          typeWriter();
+      }
+      else if (intChar < txt[str].length) {
+       document.getElementById("demo").innerHTML += txt[str].charAt(intChar);
+       intChar++;
+       setTimeout(typeWriter, speed);
+      }
+      else {
+
+        intErase = txt[str].length-1;
+        setTimeout(erase, 3000);
+        typeCursor();
+        setTimeout(typeCursor, 400);
+        setTimeout(typeCursor, 800);
+        setTimeout(typeCursor, 1200);
+        setTimeout(typeCursor, 1600);
+        setTimeout(typeCursor, 2000);
+        setTimeout(typeCursor, 2400);
+        setTimeout(typeCursor, 2800);
+        }
+
+       
+} 
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+    
+
+function erase() {
+  if(intErase >= 0) {
+   var orig = document.getElementById("demo").innerHTML;
+   var res = orig.slice(0,-1);
+   document.getElementById("demo").innerHTML = res;
+ 
+   intErase--;
+   setTimeout(erase, 30);
+  }
+  else {
+    str++;
+    intChar=0;
+    typeWriter();
+  }
+}
+
+function eraseCursor() {
+  var orig = document.getElementById("demo").innerHTML;
+  var res = orig.slice(0,-1);
+  document.getElementById("demo").innerHTML = res;
+}
+
+function typeCursor() {
+  document.getElementById("demo").innerHTML += '|';
+  setTimeout(eraseCursor, 200);
+}
+
+</script>
 </html>

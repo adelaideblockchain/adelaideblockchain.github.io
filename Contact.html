@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<title>Adelaide Blockchain</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: 'carisma_classic600_demibold';
+  }
+body, html {
+    height: 100%; 
+    line-height: 1.8;
+}
+
+br {
+  margin: 3px;
+}
+header {
+    border-bottom-left-radius: 60% 30%;
+    border-bottom-right-radius: 60% 30%;
+ 
+}
+
+
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: auto, auto;
+  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  min-height: auto;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.w3-bar .w3-button {
+    padding: 16px 24px;
+}
+
+.bgimg-2 {
+    background-position: bottom;
+    background-size: auto;
+    background-color: white;  
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.linebottom {
+    width:100%; 
+    text-align:center; 
+    border-bottom: 3px solid yellow; 
+    line-height: 60px; 
+    margin:10px 0 30px; 
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+</style>
+   
+    <!-- Favicons -->
+<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+    <!-- CSS files -->
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/fontAwesome.css">
+  <link rel="stylesheet" type="text/css" href="styles/ionicons.css">
+  <link rel="stylesheet" type="text/css" href="styles/slick.css">
+  <link rel="stylesheet" type="text/css" href="styles/jQuery.css">
+  <link rel="stylesheet" type="text/css" href="styles/magnificPopup.css">
+  <link rel="stylesheet" type="text/css" href="styles/nouiSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/simplyCountdown.css">
+  <link rel="stylesheet" type="text/css" href="styles/timeCircles.css">
+  <link rel="stylesheet" type="text/css" href="styles/elements.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/media.css">
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  
+<script src="js/navbar_slide.js"></script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" id="navbar">
+      
+    <!-- Logo -->
+    <a href="index.html">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+    </a>
+  
+    <div class="navbar-right w3-hide-small ">
+      <a href="about.html" class="navbar-item"> About</a> 
+      <a href="team.html" class="navbar-item"> Team</a> 
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Contact</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-mobile" id="home">
+    
+    <h1 class="w3-display-mobile w3-xxxlarge" style="color: aliceblue; padding:100px 50px">
+				<span class="uabb-heading-text">Get in touch with us!</span>
+        <br>
+			<span class="w3-display-mobile w3-large padding-right-500" style="margin-top: 12px;">Partnership Proposal? Business Opportunity? Development idea? Drop us a message or contact us directly below!</span>
+  </h1>
+
+    
+  <div class="w3-display-bottomright w3-text-white w3-xlarge" style="padding:24px 48px">
+      
+    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+  </div>
+</header>
+
+     <!-- Begin MailChimp Signup Form -->
+  <div id="mc_embed_signup" class="w3-display-mobile w3-text-black" style="padding:48px"><span class="w3-jumbo w3-hide-small"></span><br>
+    
+   
+		<form action="https://facebook.us18.list-manage.com/subscribe/post?u=ff5b8a3b5b7bff72cd48b3dbd&amp;id=824f646861" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<div id="mc_embed_signup_scroll">
+				<h2>Subscribe to our mailing list</h2>
+				<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+				</label>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-FNAME">First Name </label>
+					<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-LNAME">Last Name </label>
+					<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-MMERGE5">(Optional) Leave us a message expressing your interest! </label>
+					<input type="text" value="" name="MMERGE5" class="" id="mce-MMERGE5">
+				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                &nbsp;
+				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ff5b8a3b5b7bff72cd48b3dbd_824f646861" tabindex="-1" value=""></div>
+				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			</div>
+		</form>
+	</div>
+	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+    <!----End OF SM FORM------>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Add Google Maps -->
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+diff --git a/index.html b/index.html
+index d426db7..5bfd2be 100644
+--- a/index.html
++++ b/index.html
+@@ -212,7 +212,9 @@ header {
+ 
+     <br>
+ 
+-    <span id="demo" class="w3-xlarge typewriter"></span>
++	<div class="surrounding-typewriter">
++      <span id="demo" class="w3-xlarge typewriter"></span>
+	</div>
+ 
+   </div> 
+   &nbsp;&nbsp;
+diff --git a/styles/base.css b/styles/base.css
+index 05f82b3..4ddb33e 100644
+--- a/styles/base.css
++++ b/styles/base.css
+@@ -1917,4 +1917,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04747e', end
+ .popOver + .tooltip > .tooltip-arrow { bottom: 0; position: absolute; width: 0; height: 0; left: 50%; margin-left: -5px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #252525;}
+ .progress{ height: 4px; border-radius: 0px; padding: 0; margin-bottom: 21px; overflow:visible; background-color: #e8e8f9; -webkit-box-shadow: none; box-shadow: none; border: none; }
+ .progress-bar { float: left; width: 0; height: 100%; font-size: 12px; line-height: 20px; color: #fff; text-align: center; background-color: #f6ab36; -webkit-box-shadow: none; box-shadow: none; -webkit-transition: width .6s ease; -o-transition: width .6s ease; transition: width .6s ease; }
+-.progressText { font-size: 16px; font-weight: 600; color: #000; text-transform: capitalize; margin-bottom: 12px; display: inline-block; }
+\ No newline at end of file
++.progressText { font-size: 16px; font-weight: 600; color: #000; text-transform: capitalize; margin-bottom: 12px; display: inline-block; }
++
++.surrounding-typewriter {
++    display: flex;
++    height: 100px;
++}
++
++@media (max-width: 1024px) {
++	.surrounding-typewriter {
++		height: 50px;
++	}
++}
++
++@media (max-width: 900px) {
++    .surrounding-typewriter {
++        height: 80px;
++    }
++}
++
++@media (max-width: 800px) {
++    .surrounding-typewriter {
++        height: 70px;
++    }
++}
++
++@media (max-width: 660px) {
++    .surrounding-typewriter {
++        height: 90px;
++    }
++}
+diff --git a/styles/w3.css b/styles/w3.css
+index 91ed542..1cadafd 100644
+--- a/styles/w3.css
++++ b/styles/w3.css
+@@ -232,4 +232,4 @@ img{vertical-align:middle}a{color:inherit}
+ .w3-border-light-grey,.w3-hover-border-light-grey:hover,.w3-border-light-gray,.w3-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+ .w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
+ .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+-.w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+\ No newline at end of file
++.w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}

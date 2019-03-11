@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <title>Adelaide Blockchain</title>
+<head>
+<meta name="google-site-verification" content="SzuFtl0SazcOT1k3ACs-8b2cRZ2fLyYnTI55H_6L_EE" />
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+</head>
 <style>
 
 
@@ -19,7 +24,7 @@
 
 }
 
-body,header,h1,h2,h3,h4,h5,h6,div,span {
+body,header,h1,h2,h3,h4,h5,h6,span {
   font-family: 'carisma_classic600_demibold';
   }
     
@@ -29,14 +34,18 @@ body,header,html {
     height: inherit;      
     line-height: normal;
     scroll-behavior: smooth;
+
+}
+
+body{
+  background-color: yellow  ;
 }
 
 br {
   margin: 3px;
 }
 header {
-    border-bottom-left-radius: 60% 30%;
-    border-bottom-right-radius: 60% 30%;
+    
  
 }
 
@@ -44,14 +53,15 @@ header {
 
 footer{
 
-  border-top-left-radius: 60% 30%;
-  border-top-right-radius: 60% 30%;
   position: static;
   width: 100%;
-  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
-  color: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  background: #505050!important;
+  box-shadow: 0 -10px 30px 5px rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
+.middle{
+
+}
 .typewriter {
   font-family: courier;
   font: bold italic;
@@ -118,6 +128,8 @@ footer{
 .bgimg-1 {
   background-position: center;
   background-size: auto, auto;
+  background-color: grey;
+   box-shadow: 0 -10px 30px 5px rgba(197, 166, 203,1),0 2px 10px 0 rgba(197, 166, 203,1);
   /*background-image: url("assets/background.png");*/
   
   /*<!---Utilising a gradient for reduced load-time--->*/
@@ -196,12 +208,14 @@ footer{
       <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
     </a>
   
-    <div class="navbar-right w3-hide-small ">
-      <a href="#aboutSec" class="navbar-item"> About</a> 
+  <!-- Navbar (sit on top) -->
+ <div class="navbar-right w3-hide-small ">
+      <a href="About.html" class="navbar-item"> About</a> 
       <a href="team.html" class="navbar-item"> Team</a> 
+      <a href="events.html" class="navbar-item"> Events</a>
       <a href="resources.html" class="navbar-item"> Resources</a>
       <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
-      <a href="contact.html" class="navbar-item"> Contact</a>
+      <a href="contact.html" class="navbar-item"> Members</a>
     </div>
 
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -216,10 +230,13 @@ footer{
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
   <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
   <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
   <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
-  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
 </nav>
+
+<body>
 
 <!-- Header with full-height image -->
 
@@ -264,81 +281,42 @@ footer{
   </div>
 </div>
 
+<div class="karla bgimg-2 w3-display-mobile w3-container-left">
+  <h1 style="padding-bottom: 50px;  color: black; padding-left:200px; padding-right:200px; font-size: 32px; text-align: left; margin-top: 32px;">Why Blockchain?</h1>
+    <div class="item-split copy" style="margin-bottom: 50px; padding-left: 200px; padding-right: 200px; font-size: 20px;">
+        <div align="left" class=" is-centre karla">
+            Blockchain Technology is the technology that will pave the way for the future decentralised economy. Creating sound money and applications, just with math, cryptography and algorithms, provides the world with the opportunity to participate in a new way to transact value. <br>
 
-
-<!----About section---->
-  <div class="ui vertical segment" style="padding-top: 50px" >
-
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px; " id="aboutSec">
-      
-      <h1 class="ui header" style="font-size: 48px; text-align: left;">What is this all about?</h1>
-      <p></p>
-
-      <p style="font-size: 1.2em; text-align: left;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.<br><br>
-
-      The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.<br><br>
-	  <img src="assets/WorkshopImg.jpg" alt="Workshop" align="right" width="640" height="480" style="margin-left: 20px; margin-bottom: 20px;" > 
-    
-      The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.<br><br>
-
-      As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. <br><br>
-
-      We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
-
+        </div>
     </div>
-  </div>
+  <h2 style="padding-bottom: 50px;  color: black; padding-left:200px; padding-right:200px; font-size: 32px; text-align: left; margin-top: 32px;">Who are we?</h2>
+     <div class="item-split copy" style="margin-bottom: 50px; padding-left: 200px; padding-right: 200px; font-size: 20px;">
+        <div align="left" class=" is-centre karla">
+            Adelaide Blockchain is a the biggest student-run, non-for-profit organisation in the APAC region. We are dedicated to educate students, academics and the generate the public on Blockchain. Starting a year ago, we have grown to a 16 person volunteer team, connected intnernationally, worked with universities, large instuitions and government. <br>
 
-  <div class="ui vertical segment" style="padding-bottom: 50px; padding-top: 50px; background:gainsboro; border-bottom-left-radius: 60% 30%; border-bottom-right-radius: 60% 30%; border-top-left-radius: 60% 30%; border-top-right-radius: 60% 30%; "  >
-
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px; " id="aboutSec">
-      
-      <h1 class="ui header" style="font-size: 48px; text-align: right;">What we do</h1>
-
-      <p></p>
-
- <img src="assets/LectureImg.jpg" alt="Lecture" align="left" width="640" height="480" style="margin-right: 20px; margin-bottom: 20px;" >
-
-      <h5 class="ui header" style="color: black; text-align: right;">Research and Development</h5>
-
-      <p style="font-size: 1.2em; text-align: right;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
-
-      <h5 class="ui header" style="color: black; text-align: right;">Education</h5>
-
-      <p style="font-size: 1.2em; text-align: right;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
-
-
+        </div>
     </div>
-  </div>
-
-
+</div
 <!------Sponsors --->
 
 <div align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
   <h1 style="padding-bottom: 50px; color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
-    <div class="item-split copy">
+    <div class="item-split copy" style="margin-bottom: 50px;>
       <br>
         <div align="center" class="is-centre">
              <a href="http://bitfwd.com/"><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://consensys.net/"><img class="linear-transition" src="assets/consensys.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://www.adelaide.edu.au/thinclab/home"><img class="linear-transition" src="assets/ThincLabLogo.png" alt="Logo 4"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://www.dispatchlabs.io/"><img class="linear-transition" src="assets/dispatch.png" alt="logo 5"></a>
+            <a href="https://blockchainedu.org"><img class="linear-transition" src="assets/1ben.png" alt="logo 5"></a>
         </div>
     </div>
 </div>
 
 
   <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark pt-4" style="padding-top: 50px">
+<footer class="font-small unique-color-dark pt-4" style="padding-top: 50px">
 
-   <h4 style="padding-top: 50px; color: white; font-size: 25px; text-align: center; margin-top: 32px;"  > Become a part of Adelaide Blockchain</h4><br><br>
-
-   <div style=" text-align: center;" class="w3-text-white w3-xxlarge">
-    <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
-    <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
-    <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
-  </div><br><br>
+   <h4 style="padding-top: 10px; color: white; font-size: 25px; text-align: center; margin-top: 10px;"  > Become a part of Adelaide Blockchain</h4><br><br>
 
     <!-- Footer Elements -->
 
@@ -348,32 +326,27 @@ footer{
       <!-- Call to action -->
     <ul class="list-unstyled list-inline text-center py-2">
       <li class="list-inline-item">
-        <h5 class="mb-1">Have any questions?</h5>
+        <h5 class="mb-1" style="color: white">Have any questions?</h5>
       </li>
       <li class="list-inline-item">
-        <a href="contact.html" class="btn  btn-rounded">Contact Us!</a>
+      	<a href="mailto:contact@adelaideblockchain.org.au" style="color: white" class="btn  btn-rounded">Contact Us!</a>
       </li>
     </ul>
     <br><br>
       <!-- Call to action -->
 
     </div>
-    <!-- Footer Elements -->
+    <!-- Footer Elements stle -->
 
     <!-- Copyright -->
  <div class="footer-copyright text-center py-3" style="color: white">© 2018 Copyright:
-      <a href="https://adelaideblockchain.org.au">Adelaide Blockchain</a>
+      <a href="https://adelaideblockchain.org.au" style="color:white">Adelaide Blockchain</a>
     </div>
     <!-- Copyright -->
 
   </footer>
   <!-- Footer -->
-
-
-
-
-
-
+</body>
 
 <script>
 
@@ -382,17 +355,15 @@ var intChar = 0;
 var intErase = 0;
 var str = 0;
 
-var txt = ['building developer ecosystems and the Adelaide Blockchain community ...',
+var txt = ['building developer ecosystems and the South Australian Blockchain community ...',
 'scaling education of the new decentralised world ...',
-'folstering exceptional Blockchain projects ...',
-'networking globally, connecting like-minded, talented individuals ...']
+'networking globally, interfacing world class talent to the local Blockchain ecosystem  ...']
 
 var timer = 7000;
 
 var speed = 50;
 
-<!--------typeWriter-------->
-    
+
 (function() {typeWriter();})();
 
 function typeWriter() {

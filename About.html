@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<title>Adelaide Blockchain</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: 'carisma_classic600_demibold';
+  }
+body, html {
+    height: 100%; 
+    line-height: 1.8;
+}
+
+br {
+  margin: 3px;
+}
+
+header {
+    border-bottom-left-radius: 60% 30%;
+    border-bottom-right-radius: 60% 30%;
+ 
+}
+
+
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: auto, auto;
+  background-image: url("assets/background.png");
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.w3-bar .w3-button {
+    padding: 16px 24px;
+}
+
+.bgimg-2 {
+    background-position: bottom;
+    background-size: auto;
+    background-color: white;  
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+</style>
+   
+    <!-- Favicons -->
+<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+    <!-- CSS files -->
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/fontAwesome.css">
+  <link rel="stylesheet" type="text/css" href="styles/ionicons.css">
+  <link rel="stylesheet" type="text/css" href="styles/slick.css">
+  <link rel="stylesheet" type="text/css" href="styles/jQuery.css">
+  <link rel="stylesheet" type="text/css" href="styles/magnificPopup.css">
+  <link rel="stylesheet" type="text/css" href="styles/nouiSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/simplyCountdown.css">
+  <link rel="stylesheet" type="text/css" href="styles/timeCircles.css">
+  <link rel="stylesheet" type="text/css" href="styles/elements.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/media.css">
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  
+<script src="js/navbar_slide.js"></script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" id="navbar">
+      
+    <!-- Logo -->
+    <a href="index.html">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+    </a>
+  
+     <div class="navbar-right w3-hide-small ">
+      <a href="About.html" class="navbar-item"> About</a> 
+      <a href="team.html" class="navbar-item"> Team</a> 
+      <a href="events.html" class="navbar-item"> Events</a>
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Members</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
+</nav>
+
+
+
+	<!-- Header with full-height image -->
+<header class="" id="home"> <!-- w3-grayscale-min-->
+  <!----About section---->
+  <div class="ui vertical segment" style="padding-top: 50px" >
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px; " id="aboutSec">
+      
+      <h1 class="ui header" style="font-size: 48px; text-align: left;">What is this all about?</h1>
+      <p></p>
+
+      <p style="font-size: 1.2em; text-align: left;"><strong>Blockchain</strong> is a technology that provides true peer-to-peer transfer of value. It removes the need to trust intermediaries and third parties to verify validity of transactions.<br><br>
+
+      The Internet was the breakthrough technology that provided true, peer-to-peer transfer of information. It removed the requirement for intermediaries such as radio stations, TV channels, newspapers and magazines to expose your information to others.<br><br>
+    <img src="assets/WorkshopImg.jpg" alt="Workshop" align="right" width="640" height="480" style="margin-left: 20px; margin-bottom: 20px;" > 
+    
+      The removal of centralised intermediaries for peer-to-peer transfer of information, which created large bottlenecks and inefficiencies, resulted in the paradigm shift of people’s lives and our society that we have seen in the last 20 years.<br><br>
+
+      As Blockchain technology also removes the need for intermediaries, but for transfer of value, it demonstrates incredible potential to create a paradigm shift in how our lives and how society will work in the future. <br><br>
+
+      We, at Adelaide Blockchain, are compelled by the technology, and wish to empower individuals to participate in the potential once-in-a-generation opportunity to truly shape our society.</p>
+
+    </div>
+  </div>
+
+  <div class="ui vertical segment" style="padding-bottom: 50px; padding-top: 50px; background:gainsboro; border-top-left-radius: 60% 30%; border-top-right-radius: 60% 30%; "  >
+
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1000px; " id="aboutSec">
+      
+      <h1 class="ui header" style="font-size: 48px; text-align: center;">What we do</h1>
+
+      <p></p>
+
+ <img src="assets/LectureImg.jpg" alt="Lecture" align="left" width="640" height="480"  style="margin-right: 20px; margin-bottom: 20px; border-radius: 2%;" >
+
+      <h5 class="ui header" style="color: black; text-align: right;">Research and Development</h5>
+
+      <p style="font-size: 1.2em; text-align: right;">We aim to build projects and do research with cutting-edge blockchain and crypto technologies within an open-source platform. With the help of external resources and influences within the blockchain space, these projects will enable members to apply their knowledge into tangible projects.</p>
+
+      <h5 class="ui header" style="color: black; text-align: right;">Education</h5>
+
+      <p style="font-size: 1.2em; text-align: right;">Through hosting tech talks, developer tutorials, workshops, running social events and more, we aim to engage students and enthuasiasts in order to instill the technical and developmental know how needed to participate in the rapidly growing blockchain industry.</p>
+
+
+    </div>
+  </div>
+  </header>
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Add Google Maps -->
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

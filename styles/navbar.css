@@ -1,0 +1,25 @@
+/** set up our navbar, and position it fixed so there is no white gap above the CS content **/
+
+.navbar {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  transition: background 0.7s ease-out;
+  background: #505050!important;
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar-logo {
+  padding-left: 64px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  width: 250px;
+  height: auto;
+}
+
+.navbar-right {padding-right: 96px;padding-top: 24px; padding-bottom: 16px}
+
+.navbar-item {width:100%;text-align:middle; padding-top: 32px; padding-left: 16px; padding-right: 16px; font-size: 14px; color: white}

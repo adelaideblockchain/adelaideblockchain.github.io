@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<title>Events</title>
+<head>
+<meta name="google-site-verification" content="SzuFtl0SazcOT1k3ACs-8b2cRZ2fLyYnTI55H_6L_EE" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+</head>
+<style>
+
+
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body,header,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: 'carisma_classic600_demibold';
+  }
+    
+ 
+body,header,html {
+/*Change heigh to 100% to make it become big again. This currently makes it more mobile friendly*/
+    height: inherit;      
+    line-height: normal;
+    scroll-behavior: smooth;
+
+}
+
+body{
+  background-color: yellow  ;
+}
+
+br {
+  margin: 3px;
+}
+header {
+    border-bottom-left-radius: 60% 10%;
+    border-bottom-right-radius: 60% 10%;
+ 
+}
+
+
+
+footer{
+
+  position: static;
+  width: 100%;
+  background: #505050!important;
+  box-shadow: 0 -10px 30px 5px rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.karla{
+  font-family: Montserrat;
+}
+
+.carisma{
+  font-family: carisma_classic600_demibold;
+}
+
+.middle{
+
+}
+.typewriter {
+  font-family: courier;
+  font: bold italic;
+}
+
+.button {
+  border-radius: 10px;
+  border: 4px solid;
+  padding: 0px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding-top: 6px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button-discord {
+  background-color: transparent;
+  border-color: white; 
+  color: white;
+}
+.button-meetup {
+  background-color: transparent;
+  border-color: white; 
+  color: white;
+}
+.button-facebook {
+  background-color: transparent;
+  border-color: white; 
+  color: white;
+}
+
+.linebottom {
+    width:100%; 
+    text-align:center; 
+    border-bottom: 3px solid yellow; 
+    line-height: 60px; 
+    margin:10px 0 30px; 
+}
+
+.button-discord:hover {
+  background-color: #7289da;
+  border-color: red;
+  border: 4px solid;
+  color: white;
+}
+.button-meetup:hover {
+  background-color: white;
+  border-color: #ed1c40;
+  border: 4px solid;
+  color: #ed1c40;
+}
+.button-facebook:hover {
+  background-color: #7289da;
+  border-color: red;
+  border: 4px solid;
+  color: white;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: auto, auto;
+  background-color: grey;
+   box-shadow: 0 -10px 30px 5px rgba(197, 166, 203,1),0 2px 10px 0 rgba(197, 166, 203,1);
+  /*background-image: url("assets/background.png");*/
+  
+  /*<!---Utilising a gradient for reduced load-time--->*/
+
+  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  min-height: auto;
+  max-height: auto;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.w3-bar .w3-button {
+    padding: 16px 24px;
+}
+
+.bgimg-2 {
+    background-position: bottom;
+    background-size: auto;
+    background-color: white;  
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+</style>
+
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+</style>
+  <link rel='stylesheet' id='mp-theme-css'  href='theme' type='text/css' media='all' />
+<link rel='stylesheet' id='genesis-sample-css'  href='theme' type='text/css' media='all' />
+<style id='genesis-sample-inline-css' type='text/css'>
+
+    .wp-custom-logo .site-container .title-area {
+      max-width: 150px;
+    }
+    
+    .wp-custom-logo .title-area {
+      padding-top: 11.325px;
+    }
+    
+</style>
+
+<!--Had to borrow Edu's wordpress plugin-->
+
+<link rel='stylesheet' id='wp-block-library-css'  href='https://blockchainedu.org/wp-includes/css/dist/block-library/style.min.css?ver=5.1' type='text/css' media='all' />
+
+    <style type="text/css" id="wp-custom-css">
+     
+
+/* Cover */
+.wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2, .wp-block-cover .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, .wp-block-cover h2 {
+  color: #000;
+  max-width: 1000px;
+}
+
+.entry-content .wp-block-cover .wp-block-cover-text {
+    font-size: 4em;
+}
+
+.site-inner {
+    margin: 0 auto;
+    padding: 60px 30px 0;
+}
+
+.wp-block-cover, .wp-block-cover-image {
+   min-height: 600px;
+}
+
+/* Home */
+.home .entry-title{
+    display: none;
+}
+
+.home .site-inner {
+  margin-top:0px!important;
+}
+
+/* All Pages */
+.entry-title {
+  text-align: center;
+  font-size:3em;
+}
+
+#menu-primary-menu {
+  text-transform: uppercase;
+}
+
+.circle-images img {
+  border-radius: 50%;
+  width: 150px;
+}
+
+/* SendGrid Custom CSS */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: gray;
+}
+
+.sendgrid-subscription-widget input {
+      border: 0px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin-bottom:10px;
+}
+
+.sendgrid-subscription-widget {
+  max-width:400px;
+}
+
+/* Playbook Contributors */
+.circle-images .wp-block-image {
+  margin: 0 auto;
+  display: table;
+}
+
+.flex-basis-2 .wp-block-column {
+    flex-basis: 50%;
+}
+
+/* Account Page */
+@media only screen and (min-width: 960px) {
+.page-id-191 .content {
+    float: left;
+    width: 100%;
+  }
+}
+
+#mepr-account-welcome-message {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.mp_wrapper form {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.mepr_error, .mepr_updated {
+  margin: 0 auto;
+  width: 60%;
+}
+
+div#mepr-account-nav {
+    text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+.page-id-191 .content {
+    float: left;
+    width: 100%;
+  }
+}
+
+.mepr-account-change-password {
+    margin-left: 20%;
+}
+
+.mepr-login-actions {
+    margin-left: 20%;
+}
+
+.mepr-unauthorized-message {
+  margin-left:20%
+}
+
+h3 {
+  margin-left:20%;
+}
+
+@media only screen and (max-width: 600px) {
+#mepr-account-welcome-message {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mp_wrapper form {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mepr_error, .mepr_updated {
+  margin: 0 auto;
+  width: 100%;
+}
+
+  .mepr-account-change-password {
+    margin-left: 0%;
+}
+
+.mepr-login-actions {
+    margin-left: 0%;
+}
+
+.mepr-unauthorized-message {
+  margin-left:0%;
+}
+  
+h3 {
+  margin-left:0%;
+}
+  
+}
+
+    </style>
+
+  
+    <!-- Favicons -->
+<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+    <!-- CSS files -->
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/fontAwesome.css">
+  <link rel="stylesheet" type="text/css" href="styles/ionicons.css">
+  <link rel="stylesheet" type="text/css" href="styles/slick.css">
+  <link rel="stylesheet" type="text/css" href="styles/jQuery.css">
+  <link rel="stylesheet" type="text/css" href="styles/magnificPopup.css">
+  <link rel="stylesheet" type="text/css" href="styles/nouiSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/simplyCountdown.css">
+  <link rel="stylesheet" type="text/css" href="styles/timeCircles.css">
+  <link rel="stylesheet" type="text/css" href="styles/elements.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/media.css">
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  
+
+
+<script src="js/navbar_slide.js"></script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" id="navbar">
+      
+    <!-- Logo -->
+    <a href="index.html">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+    </a>
+  
+  <!-- Navbar (sit on top) -->
+    <div class="navbar-right w3-hide-small ">
+      <a href="About.html" class="navbar-item"> About</a> 
+      <a href="team.html" class="navbar-item"> Team</a> 
+      <a href="events.html" class="navbar-item"> Events</a>
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Members</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
+</nav>
+
+<body>
+
+<!-- Header with full-height image -->
+
+<header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
+    <section id="event" class="logoshowcase-style-2 md-logoshowcase-section text-align-center width-100 float-left padding-tb-73-50">
+      <div class="container wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+        <p></p>
+        <h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Events</h2>
+  &nbsp;&nbsp;
+        <h5 class="karla font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Adelaide Blockchain hosts a vairiety of events including lectures, workshops and networking activities, as well as partners with and co-hosts blockchain conferences and hackathons year round!
+
+
+</h5>
+
+  </div> 
+
+ 
+ </header>
+
+
+<!-- Modal for full size images on click-->
+<body class="page-template-default page page-id-124 wp-custom-logo wp-embed-responsive header-full-width full-width-content first-block-core-image first-block-align-center" itemscope itemtype="https://schema.org/WebPage">
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+<h2 style="text-align: center;" class="carisma text-large-40 text-transform-uppercase font-weight-600 color-black">Upcoming Events</strong></h2>&nbsp;&nbsp;&nbsp;
+
+
+
+<div class="container">
+  <div class="center"></div>
+
+<div class="wp-block-columns alignwide has-2-columns" style="max-width: 1000px" style = "position: absolute; top:50%; left: 50%;">
+<div class="wp-block-column">
+<figure class="wp-block-image"><img src="assets/belbc140319.jpg" alt="Workshop" class="wp-image-136" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+
+
+<div class="wp-block-column karla" style="max-width: 1000px">
+<h3><strong>Adelaide Blockchain Social Night</strong></h3>
+
+
+
+<p>Casual night of drinks at the Belgian Beer Cafe, with the Adelaide Blockchain and the Adelaide Bitcoiner's community. See you there!</p>
+
+
+
+<p>🌐 Where: 27-29 Ebenezer Pl, Adelaide SA 5000 <br>📆️ When: March 14th <br>💻 Link: <a href="https://www.facebook.com/events/2538582969487100/">https://www.facebook.com/events/2538582969487100/</a><br>🎟️ Student Tickets: FREE<br>🎟️ Regular Tickets: FREE</p>
+</div>
+</div>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 style="text-align: center;" class="text-large-40 text-transform-uppercase font-weight-600 color-black">Past Events</strong></h2>&nbsp;&nbsp;&nbsp;
+
+
+<div class="wp-block-columns alignwide has-2-columns" style="max-width: 1000px" style = "position: absolute; top:50%; left: 50%;">
+<div class="wp-block-column">
+<figure class="wp-block-image"><img src="assets/10kinochal.jpg" alt="Workshop" class="wp-image-136" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+
+
+
+<div class="wp-block-column karla">
+<h3><strong>Workshop for $100,000 Blockchain Innovation Challenge</strong></h3>
+
+
+<p>Applications are now open for South Australia’s Blockchain Innovation Challenge, with prizes of up to $100,000 on offer!
+
+Adelaide Blockchain will be hosting an ideation and networking event for people interested in entering the Blockchain Innovation Challenge and looking to further refine their ideas.
+
+The presenters will provide an overview of the Challenge, touch on how you can develop your blockchain ideas and provide you with an opportunity to network over food and form a team if you have not already done so!
+
+This exciting event is a great opportunity to discuss your blockchain ideas and network with like-minded blockchain enthusiasts, developers and entrepreneurs.
+
+We look forward to seeing everyone at this event!</p>
+
+
+
+<p>🌐 Where: Level 10 Flinders University, 182 Victoria Square<br>📆️ When: Jan 23rd<br>💻 Link: <a href="https://www.facebook.com/events/1976816229033332/">https://www.facebook.com/events/1976816229033332/</a><br>🎟️ Student Tickets: FREE<br>🎟️ Regular Tickets: FREE<br>📌 Tips: Come ready to take lots of notes!</a>.<br>💸 Grants: TBD. Email <a href="HelloWorld@gmail.com">HelloWorld@gmail.com</a> <br></p>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<div class="wp-block-columns alignwide has-2-columns" style="max-width: 1000px" style = "position: absolute; top:50%; left: 50%;">
+<div class="wp-block-column">
+<figure class="wp-block-image"><img src="assets/xmas.jpg" alt="Workshop" class="wp-image-136" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+
+
+
+<div class="wp-block-column karla">
+<h3><strong>Blockchain Christmas Party</strong></h3>
+
+
+
+<p>2018 has been a not so great a year for the crypto markets, but has been a fantastic year for the growth of the Blockchain/Crypto ecosystem in Adelaide. 
+
+Everyone is super busy getting stuff done, so what better way to take some time off and talk about our Blockchain obsessed lives than with an Xmas party!
+
+We will be providing food and drinks (yes alcohol) at the event, all you have to do is rock up!
+
+We only have 20 tickets available, so get in quick!
+
+Brought to you by Adelaide Blockchain, CryptoSA, Cryptocate, Digichain Capital and more!</p>
+
+
+
+<p>🌐 Where: 180 Morphett Street, Level 2, Adelaide, Australia<br>📆️ When: Dec 20th <br>💻 Link: <a href="https://www.facebook.com/events/296218657679528/">https://www.facebook.com/events/296218657679528/</a><br>🎟️ Student Tickets: FREE<br>🎟️ Regular Tickets: FREE</p>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+<div class="wp-block-columns alignwide has-2-columns" style="max-width: 1000px" style = "position: absolute; top:50%; left: 50%;">
+<div class="wp-block-column">
+<figure class="wp-block-image"><img src="assets/ethbootcamp.jpg" alt="Workshop" class="wp-image-136" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+
+
+
+<div class="wp-block-column karla">
+<h3><strong>Adelaide Blockchain Bootcamp</strong></h3>
+
+
+
+
+<p>Many of you have expressed interest in getting your hands dirty in coding Blockchain based and software and applications.
+
+In order to fulfill these requests and further build out Blockchain talent in Adelaide, Adelaide Blockchain is running a 1 day Bootcamp that will run through the basics of smart contract development on Ethereum and various decentralised applications (dApps) such as the Loom network. We will be also be running a workshop on how to build your own Token and other custom smart contracts!
+
+This event is free and will provide free PIZZA and drinks for lunch. Keep in mind this will be code focused, but will be introductory to allow even crypto noobs to come!
+
+More info on the provided link below!</p>
+
+
+
+
+<p>🌐 Where:Lot Fourteen<br>📆️ When: Nov 24th<br>💻 Link: <a href="https://www.facebook.com/events/1945293665777735/">https://www.facebook.com/events/1945293665777735/</a><br>🎟️ Student Tickets: FREE<br>🎟️ Regular Tickets: FREEbr>📌 Tips:   This Bootcamp does include coding, so please bring a laptop and power supply. See you Saturday!!</p>
+</div>
+</div>
+</div></article></main></div></div><div class="footer-widgets" id="genesis-footer-widgets">
+  
+</body></html>
+
+</div>
+<script>
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+    
+
+function erase() {
+  if(intErase >= 0) {
+   var orig = document.getElementById("demo").innerHTML;
+   var res = orig.slice(0,-1);
+   document.getElementById("demo").innerHTML = res;
+ 
+   intErase--;
+   setTimeout(erase, 30);
+  }
+  else {
+    str++;
+    intChar=0;
+    typeWriter();
+  }
+}
+
+function eraseCursor() {
+  var orig = document.getElementById("demo").innerHTML;
+  var res = orig.slice(0,-1);
+  document.getElementById("demo").innerHTML = res;
+}
+
+function typeCursor() {
+  document.getElementById("demo").innerHTML += '|';
+  setTimeout(eraseCursor, 200);
+}
+
+</script>
+</html>

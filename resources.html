@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<title>Adelaide Blockchain</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+@font-face {
+    font-family: 'carisma_classic600_demibold';
+    src: url('carismaclassic-600-demibold-webfont.woff2') format('woff2'),
+         url('carismaclassic-600-demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body,h1,h2,h3,h4,h5,h6,div,span {
+  font-family: 'carisma_classic600_demibold';
+  }
+body, html {
+    height: 100%; 
+    line-height: 1.8;
+}
+
+br {
+  margin: 3px;
+}
+header {
+  
+    border-bottom-left-radius: 60% 30%;
+    border-bottom-right-radius: 60% 30%;
+ 
+}
+
+
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: auto, auto;
+  background-image: url("assets/background.png");
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+.w3-bar .w3-button {
+    padding: 16px 24px;
+}
+
+.bgimg-2 {
+    background-position: bottom;
+    background-size: auto;
+    background-color: white;  
+    min-height: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+    .collapsible {
+   background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1/*#bc9dc8*/;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+    
+</style>
+   
+    <!-- Favicons -->
+<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+    <!-- CSS files -->
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/fontAwesome.css">
+  <link rel="stylesheet" type="text/css" href="styles/ionicons.css">
+  <link rel="stylesheet" type="text/css" href="styles/slick.css">
+  <link rel="stylesheet" type="text/css" href="styles/jQuery.css">
+  <link rel="stylesheet" type="text/css" href="styles/magnificPopup.css">
+  <link rel="stylesheet" type="text/css" href="styles/nouiSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="styles/simplyCountdown.css">
+  <link rel="stylesheet" type="text/css" href="styles/timeCircles.css">
+  <link rel="stylesheet" type="text/css" href="styles/elements.css">
+  <link rel="stylesheet" type="text/css" href="styles/base.css">
+  <link rel="stylesheet" type="text/css" href="styles/media.css">
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  
+<script src="js/navbar_slide.js"></script>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="navbar" id="navbar">
+      
+    <!-- Logo -->
+    <a href="index.html">
+      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+    </a>
+  
+   <div class="navbar-right w3-hide-small ">
+      <a href="About.html" class="navbar-item"> About</a> 
+      <a href="team.html" class="navbar-item"> Team</a> 
+      <a href="events.html" class="navbar-item"> Events</a>
+      <a href="resources.html" class="navbar-item"> Resources</a>
+      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
+      <a href="contact.html" class="navbar-item"> Members</a>
+    </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
+  <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+  <a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>
+  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
+  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
+</nav>
+		<!-- call to action start -->
+
+		<section id="sponsers" class="logoshowcase-style-2 md-logoshowcase-section text-align-center width-100 float-left padding-tb-73-50">
+			<div class="container wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+        
+        <p></p>
+
+				<h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Resources</h2>
+				<h5 class="font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Open source resources to help you get up to speed</h5>
+				<div class="logo-slider row">
+                    
+                    
+            <button class="collapsible">Intro to Blockchain and Crypto:</button>
+                    &nbsp;
+                    <div class="content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRe-4sgfaGjzBvuJf9FMHWwwLjQbYH0Az" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <pre style="text-align:centre; font-size: 14px; font-family: verdana">A playlist containing recordings of our four part "Intro to Blockchain" lecture series</pre>
+
+                    </div>
+                    
+            <button class="collapsible">Beginner's guide to Coding and Building on top of Ethereum (Basic programming experience recommended):</button>
+                    &nbsp;
+                    <div class="content">
+                    
+                        <h5 style = "font-family: verdana;">If you are confident with the theory behind the tech and would just like to jump straight into it:</h5>
+                        &nbsp;
+
+<pre style="text-align:left; font-size: 14px; font-family: verdana">- A beginner's guide to Solidity programming and Smart-Contract deployment from our  <a style= "color: purple;" href="https://github.com/adelaideblockchain/bootcamp2018">2018 Bootcamp</a>. 
+Note: Although not necessary, you will take a lot of out of this by knowing basic programming concepts
+                        
+- Through gamification, some online free open sources endeavours assist in the learning of solidity: <a style= "color: purple;" href="https://cryptozombies.io/">CryptoZombies</a> and <a style= "color: purple;" href="https://www.bitdegree.org/courses/learn-solidity-space-doggos/welcome">Space Doggos</a> are two of these.
+
+- This <a style= "color: purple;" href="https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e"> Hackernoon 5-part series </a> on Smart Contract deployment is quite in-depth and comprehensive, giving a good overview on explaining
+concepts necessary to build and deploy successful Dapps.
+
+</pre>                                          
+  </div>  
+                    
+         <button class="collapsible">Setting up a production environment:</button>
+                    &nbsp;
+                    <div class="content">
+                        
+                        <h5 style = "font-family: verdana;">Before developing the latests and greatest killer Dapp, you'll probably want to set up your development environment. </h5>
+                        &nbsp;
+
+<pre style="text-align:left; font-size: 14px; font-family: verdana"><a style= "color: purple;" href="https://nodejs.org/en/">NodeJS</a> - This comes with NPM which are necessary to develop with JavaScript. 
+                     
+<a style= "color: purple;" href="https://nodejs.org/en/">Truffle</a> - together with <a style= "color: purple;" href="http://truffleframework.com/ganache/">Ganache</a> (recommended)
+
+After you have downloaded and installed the above tools, follow this <a style= "color: purple;" href="https://nodejs.org/en/">great tutorial</a> to get startted with Truffle. 
+</pre>
+
+                    </div>
+ <h5 style = "font-family: verdana;">Below are links to a variety of external resources listed in our github resource repository:</h5>
+                
+					
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources/Books%20%26%20Reading" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Books</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+						  <p><a href="https://github.com/adelaideblockchain/education/tree/master/lecture_series%20%26%20Misc" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Lectures & Media</a></p>
+            </div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Workshop sessions</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/resources/Crypto%20%26%20Market" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Crypto & Market</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+              <p><a href="https://github.com/adelaideblockchain/education/tree/master/Projects%20%26%20Documentation" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Projects and Docs</a></p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+						<div class="logo-image border-dim-gray bg-white margin-bottom-30">
+							<p><a href="https://github.com/adelaideblockchain/bootcamp2018" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">2018 Bootcamp</a></p>
+						</div>
+					</div>
+				</div>
+				  <div class="w3-text-white w3-xlarge" style="position: absolute;">
+      
+
+  </div>
+				</div>
+            
+
+    <div class="w3-display-bottomleft w3-text-white w3-xlarge" style="padding:24px 48px">
+      <a href="https://facebook.com/adelaideblockchain"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://twitter.com/adelblockchain" > <i class="fa fa-twitter w3-hover-opacity"></i></a>&nbsp;
+      <a href="mailto:adelaideblockchain@gmail.com" > <i class="fa fa-envelope w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://linkedin.com/company/adelaideblockchain"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>&nbsp;
+      <a href="https://github.com/adelaideblockchain" > <i class="fa fa-github w3-hover-opacity"></i></a>&nbsp;
+    </div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Add Google Maps -->
+<script>
+
+    
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+    
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>

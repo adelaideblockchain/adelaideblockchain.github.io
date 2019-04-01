@@ -24,7 +24,7 @@
 
 }
 
-body,header,h1,h2,h3,h4,h5,h6,span {
+body,header,h1,h2,h3,h4,h5,h6,div,span {
   font-family: 'carisma_classic600_demibold';
   }
     
@@ -44,9 +44,9 @@ body{
 br {
   margin: 3px;
 }
-
 header {
-    
+    border-bottom-left-radius: 60% 10%;
+    border-bottom-right-radius: 60% 10%;
  
 }
 
@@ -58,6 +58,36 @@ footer{
   width: 100%;
   background: #505050!important;
   box-shadow: 0 -10px 30px 5px rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.button {
+  border-radius: 10px;
+  border: 4px solid;
+  padding: 0px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding-top: 6px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+/*Put border color AFTER color */
+.button-member:hover {
+  background-color: #ed1c40;
+  border: 4px solid;
+  color: white;
+  border-color: #ed1c40;
+  width: 50%;
+}
+
+.button-member {
+  background-color: white;
+  border: 4px solid;
+  color: #ed1c40;
+  border-color: white;
+  width: 50%;
 }
 
 .karla{
@@ -84,7 +114,6 @@ footer{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  padding-top: 6px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
@@ -106,13 +135,28 @@ footer{
   color: white;
 }
 
-.linebottom {
+.lineleftlav{
     width:100%; 
     text-align:center; 
-    border-bottom: 3px solid yellow; 
-    line-height: 60px; 
-    margin:10px 0 30px; 
+    border-left: 10px solid lavender;
+    padding-left: 10px;
 }
+
+.lineleftmag{
+    width:100%; 
+    text-align:center; 
+    border-left: 10px solid magenta;
+    padding-left: 10px;
+}
+
+.lineleftdvio{
+    width:100%; 
+    text-align:center; 
+    border-left: 10px solid darkviolet; 
+    padding-left: 10px;
+}
+
+
 
 .button-discord:hover {
   background-color: #7289da;
@@ -278,7 +322,7 @@ img.emoji {
 
 .sendgrid-subscription-widget input {
       border: 0px solid #ddd;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #eee;
       margin-bottom:10px;
 }
 
@@ -377,6 +421,9 @@ h3 {
 h3 {
   margin-left:0%;
 }
+
+
+
   
 }
 
@@ -384,8 +431,8 @@ h3 {
 
   
     <!-- Favicons -->
-<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16" />
     <!-- CSS files -->
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="styles/animate.css">
@@ -409,6 +456,14 @@ h3 {
 
 <script src="js/navbar_slide.js"></script>
 
+<!--For Custom Modal setup-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="navbar" id="navbar">
@@ -421,10 +476,8 @@ h3 {
    <!-- Navbar (sit on top) -->
  <div class="navbar-right w3-hide-small ">
      <!-- <a href="About.html" class="navbar-item"> About</a> -->
-      <a href="team.html" class="navbar-item"> Team</a> 
       <a href="events.html" class="navbar-item"> Events</a>
      <!-- <a href="resources.html" class="navbar-item"> Resources</a> -->
-      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
       <a href="contact.html" class="navbar-item"> Members</a>
     </div>
 
@@ -439,10 +492,8 @@ h3 {
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
  <!--<a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>-->
-  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
   <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
   <!--<a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>-->
-  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
   <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
 </nav>
 
@@ -454,20 +505,15 @@ h3 {
     <section id="event" class="logoshowcase-style-2 md-logoshowcase-section text-align-center width-100 float-left padding-tb-73-50">
       <div class="container wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
         <p></p>
-        <h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Members</h2> <br> 
+        <h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">General Membership</h2> <br> 
   &nbsp;&nbsp;
-        <h5 class="karla font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Have you been enjoying Adelaide Blockchain's initiative in promoting education and engagement in South Australia? <br> 
-Would you like to contribute more and become a member Adelaide Blockchain?  <br> <br> 
+        <h4 class="karla font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Adelaide Blockchain is a non-for-profit, incorporated association, and as a result, is open for members! <br> 
+        Becoming a member is super easy, all you have to do is fill out the form below. There is only one type of membership, and it's all FREE. Benefits include: <br> <br> 
+        <h5 style="text-align: left; font-size: 22px;" class="text-medium-22 color-bright-gray font-weight-300 karla lineleftdvio">
 
-
-Well, all Adelaide Blockchain Membership is FREE and includes the following benefits!  <br> 
-
-A vote at all of out general meetings, including annual AGM and special general meetings.   <br> 
-
-Access to all of our events, and discounts for events that cost money.  <br> 
-
-Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and much more!  <br> 
-
+        A vote at all of our general meetings, including our AGM and special general meetings.<br>
+        Access to all of our events, and discounts for events that have admission fees.<br>
+        Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and much more!<br> 
 
 
 
@@ -481,6 +527,7 @@ Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and
 
 <!-- Modal for full size images on click-->
 <body class="page-template-default page page-id-124 wp-custom-logo wp-embed-responsive header-full-width full-width-content first-block-core-image first-block-align-center" itemscope itemtype="https://schema.org/WebPage">
+
 
 
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -512,20 +559,19 @@ Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and
 </style>
     <form action="https://facebook.us18.list-manage.com/subscribe/post?u=ff5b8a3b5b7bff72cd48b3dbd&amp;id=eefb1a23e7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-        <h2>Become a member</h2>
-        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+        <div class="indicates-required"><span class="asterisk"style="color: red">*</span> indicates required</div>
         <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+          <label for="mce-EMAIL">Email Address  <span class="asterisk"style="color: red">*</span>
         </label>
           <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
         </div>
      <div class="mc-field-group">
-  <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+  <label for="mce-FNAME">First Name  <span class="asterisk"style="color: red">*</span>
 </label>
   <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
 </div>
 <div class="mc-field-group">
-  <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
+  <label for="mce-LNAME">Last Name  <span class="asterisk"style="color: red">*</span>
 </label>
 &nbsp;
 
@@ -536,7 +582,7 @@ Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and
   <input type="text" value="" name="MMERGE5" class="" id="mce-MMERGE5">
 </div>
 <div class="mc-field-group">
-  <label for="mce-MMERGE4">Membership Status  <span class="asterisk">*</span>
+  <label for="mce-MMERGE4">Membership Status  <span class="asterisk"style="color: red">*</span>
 </label>
   <select name="MMERGE4" class="required" id="mce-MMERGE4">
   <option value="I would like to register as an Adelaide Blockchain general member." selected="">I would like to register as an Adelaide Blockchain general member.</option>
@@ -546,29 +592,58 @@ Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and
         </div>
        &nbsp;
 
+       
         <div id="mce-responses" class="clear">
           <div class="response" id="mce-error-response" style="display:none"></div>
           <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    
+        </div>
         
         
                 &nbsp;
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ff5b8a3b5b7bff72cd48b3dbd_824f646861" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="w3-button w3-ripple w3-purple"></div>
+        <div onclick="myfunction()" class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
       </div>
     </form>
   </div>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE4';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+  <script>
+    function myfunction() {
+      Swal.fire({
+        title: 'Thanks for joining Adelaide Blockchain!',
+         width: 600,
+      })
+    }
+</script>
+
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {
+      window.fnames = new Array(); 
+      window.ftypes = new Array();
+
+      fnames[0]='EMAIL';ftypes[0]='email';
+      fnames[1]='FNAME';ftypes[1]='text';
+      fnames[2]='LNAME';ftypes[2]='text';
+      fnames[3]='ADDRESS';ftypes[3]='address';
+      fnames[4]='PHONE';ftypes[4]='phone';
+      fnames[5]='MMERGE4';ftypes[5]='text';
+    }
+
+      (jQuery));var $mcj = jQuery.noConflict(true);
+
+  </script>
 
 <!--End mc_embed_signup-->
 </div>
 
 
    <!-- Footer -->
-<footer class="font-small unique-color-dark pt-4" style="padding-top: 50px">
+<footer class="font-small unique-color-dark pt-4" style="padding-top: 20px; text-align: center;">
 
-   <h4 style="padding-top: 10px; color: white; font-size: 25px; text-align: center; margin-top: 10px;"  > Become a part of Adelaide Blockchain</h4><br><br>
-
+   <h4 style="padding-top: 10px; color: white; font-size: 25px; text-align: center; margin-top: 10px;"> Become a part of Adelaide Blockchain</h4>
+      <a href="contact.html" class="button button-member" style="font-size: 22px; margin-top: 10px; margin-bottom: 20px;"> JOIN HERE
+        <img style="width: auto; height: 40px; margin-bottom: 6px;"></img>
+      </a><br>
     <!-- Footer Elements -->
 
 
@@ -590,18 +665,22 @@ Discounts for future merchandise, including t-shirts, caps, pub crawl shirts and
     <!-- Footer Elements stle -->
 
     <!-- Copyright -->
- <div class="footer-copyright text-center py-3" style="color: white">© 2018 Copyright:
+ <div class="footer-copyright text-center py-3" style="color: white">© 2019 Copyright:
       <a href="https://adelaideblockchain.org.au" style="color:white">Adelaide Blockchain</a>
     </div>
     <!-- Copyright -->
 
   </footer>
+  <!-- Footer -->
 
 
 
 
 <script>
-    
+
+//Swal.fire('Your now a member of Adelaide Blockchain!')
+
+
     // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 

@@ -24,7 +24,7 @@
 
 }
 
-body,header,h1,h2,h3,h4,h5,h6,span {
+body,header,h1,h2,h3,h4,h5,h6,span,div {
   font-family: 'carisma_classic600_demibold';
   }
     
@@ -45,12 +45,6 @@ br {
   margin: 3px;
 }
 
-header {
-    
- 
-}
-
-
 
 footer{
 
@@ -63,6 +57,11 @@ footer{
 .middle{
 
 }
+
+.karla{
+  font-family: Montserrat;
+}
+
 .typewriter {
   font-family: courier;
   font: bold italic;
@@ -86,22 +85,25 @@ footer{
   background-color: transparent;
   border-color: white; 
   color: white;
+  width: 300px;
 }
 .button-meetup {
   background-color: transparent;
   border-color: white; 
   color: white;
+  width: 300px;
 }
 .button-facebook {
   background-color: transparent;
   border-color: white; 
   color: white;
+  width: 300px;
 }
 
 .linebottom {
     width:100%; 
     text-align:center; 
-    border-bottom: 3px solid yellow; 
+    border  : 3px solid yellow; 
     line-height: 60px; 
     margin:10px 0 30px; 
 }
@@ -111,18 +113,38 @@ footer{
   border-color: red;
   border: 4px solid;
   color: white;
+  width: 300px;
 }
 .button-meetup:hover {
   background-color: white;
   border-color: #ed1c40;
   border: 4px solid;
   color: #ed1c40;
+  width: 300px;
 }
 .button-facebook:hover {
   background-color: #7289da;
   border-color: red;
   border: 4px solid;
   color: white;
+  width: 300px;
+}
+
+/*Put border color AFTER color */
+.button-member:hover {
+  background-color: #ed1c40;
+  border: 4px solid;
+  color: white;
+  border-color: #ed1c40;
+  width: 80%;
+}
+
+.button-member {
+  background-color: white;
+  border: 4px solid;
+  color: #ed1c40;
+  border-color: white;
+  width: 80%;
 }
 
 /* Full height image header */
@@ -130,12 +152,14 @@ footer{
   background-position: center;
   background-size: auto, auto;
   background-color: grey;
-   box-shadow: 0 -10px 30px 5px rgba(197, 166, 203,1),0 2px 10px 0 rgba(197, 166, 203,1);
+   /*box-shadow: 0 -10px 30px 5px rgba(197, 166, 203,1),0 2px 10px 0 rgba(197, 166, 203,1);
   /*background-image: url("assets/background.png");*/
   
   /*<!---Utilising a gradient for reduced load-time--->*/
 
-  background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);
+  /*background-image: linear-gradient(to right, #864299 , #9A6AAD,#C5A6CB);*/
+
+
   min-height: auto;
   max-height: auto;
   background-repeat: no-repeat;
@@ -175,8 +199,8 @@ footer{
 </style>
    
     <!-- Favicons -->
-<link rel="icon" type="image/png" href="assets/favicon32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="assets/favicon16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16" />
     <!-- CSS files -->
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="styles/animate.css">
@@ -206,17 +230,15 @@ footer{
       
     <!-- Logo -->
     <a href="index.html">
-      <img style="width: 280px; height: auto" class="navbar-logo" src="assets/logo.png" alt="Logo1">
+      <img style="width: 300px; height: auto;" class="navbar-logo" src="assets/logo.png" alt="Logo1">
     </a>
   
   <!-- Navbar (sit on top) -->
  <div class="navbar-right w3-hide-small ">
      <!-- <a href="About.html" class="navbar-item"> About</a> -->
-      <a href="team.html" class="navbar-item"> Team</a> 
       <a href="events.html" class="navbar-item"> Events</a>
      <!-- <a href="resources.html" class="navbar-item"> Resources</a> -->
-      <a href="sponsors.html" class="navbar-item"> Sponsors</a> 
-      <a href="contact.html" class="navbar-item"> Members</a>
+      <a href="member.html" class="navbar-item"> Members</a>
     </div>
 
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -230,11 +252,9 @@ footer{
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
  <!--<a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>-->
-  <a href="team.html" onclick="w3_close()" class="w3-bar-item w3-button">Team</a>
   <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
   <!--<a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>-->
-  <a href="sponsors.html" onclick="w3_close()" class="w3-bar-item w3-button">Sponsors</a>
-  <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
+  <a href="member.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
 </nav>
 
 <body>
@@ -242,37 +262,54 @@ footer{
 <!-- Header with full-height image -->
 
 <header class="bgimg-1" id="home"> <!-- w3-grayscale-min-->
-  <div class="w3-container w3-content w3-text-white" style="padding-top: 200px;  padding-bottom: 450px;">
+  <div class="w3-container w3-content w3-text-white" style="padding-top: 100px;  padding-bottom: 100px; text-align: center;">
   <!---<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band"> --->
 
-    <span class="w3-display-mobile w3-xxxlarge padding-right-500 linebottom">ADELAIDE BLOCKCHAIN</span><br><br><br><br>
-    <span class="w3-display-mobile w3-xlarge padding-right-500" style="margin-top: 12px;"> a student run Blockchain non-for-profit based in South Australia</span><br>
+    <img style="width: 500px; height: auto;" src="assets/logo_fulldesign_upright.png" alt="Logo1"><br>
+    <span style="margin-top: 12px; font-size: 25px"> a student run Blockchain non-for-profit based in South Australia</span><br>
 
     <div style="margin-top: 12px;">
       <a href="https://www.facebook.com/adelaideblockchain/" class="button button-facebook">JOIN US ON FACEBOOK
        <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/facebook.png"></img>
-     </a>
-     <a href="https://discord.gg/33UGqfk" class="button button-discord">JOIN OUR COMMUNITY
+      </a>
+      <a href="https://discord.gg/G4khjjM" class="button button-discord">JOIN OUR COMMUNITY
        <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/discord.png"></img>
-     </a>
+      </a>
       <a href="https://www.meetup.com/Adelaide-Blockchain/" class="button button-meetup">COME TO OUR EVENTS
        <img style="width: auto; height: 28px; margin-bottom: 6px;" src="assets/meetup.png"></img>
       </a>
-      <a href="contact.html" class="button button-facebook" style="width:80%"> BECOME AN ADELAIDE BLOCKCHAIN MEMBER
+      <div style="margin-top: 30px; font-size: 17px;" class="karla"> Adelaide Blockchain is a student led organisation dedicated in education and adoption of Blockchain technology for the wider South Australian community. With our robust international network we strive to engage our local, globally compeititve talent, provide extraordinary employment opportunity and support the economy of South Australia. <br><br> 
+      </div>
+      <div style="font-size: 18px; margin-bottom: 30px;"> Would you like to become apart of what we do? Become a member!
+      </div>
+      <a href="member.html" class="button button-member" style="font-size: 22px;"> JOIN HERE
        <img style="width: auto; height: 40px; margin-bottom: 6px;"></img>
-     </a><br>
+      </a><br>
 
    </div>
 
     <br>
 
-	<div class="surrounding-typewriter">
+	<!---<div class="surrounding-typewriter">
       <span id="demo" class="w3-xlarge typewriter"></span>
-	</div>
+	</div>--->
 
   </div> 
   &nbsp;&nbsp;
  
+ <!------Featured in--->
+
+<div align="center" style="background-color: #EEEEEE; "class="bgimg-2 w3-display-mobile w3-container-centre">
+  <h1 style="padding-bottom: 20px; color: black; font-size: 48px; text-align: center; margin-top: 32px;">In the Media</h1>
+    <div class="item-split copy" style="margin-bottom: 50px;>
+      <br>
+        <div align="center" class="is-centre">
+             <a href="https://www.forbes.com/sites/alisonmccauley/2019/03/20/motivated-and-trained-generation-blockchain-is-preparing-to-disrupt-you/#5c803d5e6f04" ><img style="padding-bottom: 30px;"class="linear-transition" src="assets/forbes200.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.adelaidenow.com.au/business/sa-business-journal/local-blockchain-experts-are-gearing-up-for-next-months-global-summit-in-adelaide/news-story/5c13cbcfab76df3cb9bbaa881b8fe04a"><img style="padding-bottom: 20px;"class="linear-transition" src="assets/advertiser300.png" alt="Logo 3"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</div>
+
  </header>
 
 
@@ -285,11 +322,11 @@ footer{
   </div>
 </div>
 
-<!------Sponsors --->
+<!------Our Sponsors and Partners --->
 
 <div align="center"class="bgimg-2 w3-display-mobile w3-container-centre">
-  <h1 style="padding-bottom: 50px; color: black; font-size: 48px; text-align: center; margin-top: 32px;"> Our Sponsors and Partners</h1>
-    <div class="item-split copy" style="margin-bottom: 50px;>
+  <h1 style="padding-bottom: 50px; color: black; font-size: 48px; text-align: center; margin-top: 32px;">Our Sponsors and Partners</h1>
+    <div class="item-split copy" style="margin-bottom: 20px;>
       <br>
         <div align="center" class="is-centre">
              <a href="http://bitfwd.com/"><img class="linear-transition" src="assets/bitfwd.png" alt="Logo 2"></a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -300,12 +337,13 @@ footer{
     </div>
 </div>
 
-
   <!-- Footer -->
-<footer class="font-small unique-color-dark pt-4" style="padding-top: 50px">
+<footer class="font-small unique-color-dark pt-4" style="padding-top: 20px; text-align: center;">
 
-   <h4 style="padding-top: 10px; color: white; font-size: 25px; text-align: center; margin-top: 10px;"  > Become a part of Adelaide Blockchain</h4><br><br>
-
+   <h4 style="padding-top: 10px; color: white; font-size: 25px; text-align: center; margin-top: 10px;"> Become a part of Adelaide Blockchain</h4>
+      <a href="member.html" class="button button-member" style="font-size: 22px; margin-top: 10px; margin-bottom: 20px; width:60%"> JOIN HERE
+        <img style="width: auto; height: 40px; margin-bottom: 6px;"></img>
+      </a><br>
     <!-- Footer Elements -->
 
 
@@ -327,7 +365,7 @@ footer{
     <!-- Footer Elements stle -->
 
     <!-- Copyright -->
- <div class="footer-copyright text-center py-3" style="color: white">© 2018 Copyright:
+ <div class="footer-copyright text-center py-3" style="color: white">© 2019 Copyright:
       <a href="https://adelaideblockchain.org.au" style="color:white">Adelaide Blockchain</a>
     </div>
     <!-- Copyright -->

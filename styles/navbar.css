@@ -12,6 +12,7 @@
   right: 0;
 }
 
+
 .navbar-logo {
   padding-left: 64px;
   padding-top: 8px;
@@ -22,4 +23,24 @@
 
 .navbar-right {padding-right: 96px;padding-top: 24px; padding-bottom: 16px}
 
-.navbar-item {width:100%;text-align:middle; padding-top: 32px; padding-left: 16px; padding-right: 16px; font-size: 14px; color: white}
+.navbar-item {
+  width:100%;
+  text-align:middle;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: white
+}
+
+
+
+.navbar-item:hover {
+  width:100%;
+  text-align:middle;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px; 
+  color: red;     
+}

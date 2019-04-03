@@ -132,7 +132,22 @@ footer{
   border: 4px solid;
   color: white;
 }
+/*Put border color AFTER color */
+.button-member:hover {
+  background-color: #ed1c40;
+  border: 4px solid;
+  color: white;
+  border-color: #ed1c40;
+  width: 80%;
+}
 
+.button-member {
+  background-color: white;
+  border: 4px solid;
+  color: #ed1c40;
+  border-color: white;
+  width: 80%;
+}
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
@@ -403,6 +418,9 @@ h3 {
   <link rel="stylesheet" type="text/css" href="styles/media.css">
   <link rel="stylesheet" type="text/css" href="styles/navbar.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+   <link rel="stylesheet" type="text/css" href="styles/footer.css">
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   
 
@@ -421,6 +439,7 @@ h3 {
   <!-- Navbar (sit on top) -->
  <div class="navbar-right w3-hide-small ">
      <!-- <a href="About.html" class="navbar-item"> About</a> -->
+      <a href="http://adelaideblockchain.org.au" class="navbar-item"> Home</a>
       <a href="events.html" class="navbar-item"> Events</a>
      <!-- <a href="resources.html" class="navbar-item"> Resources</a> --> 
       <a href="member.html" class="navbar-item"> Members</a>
@@ -437,7 +456,9 @@ h3 {
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
  <!--<a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>-->
+  <a href="http://adelaideblockchain.org.au" onclick="w3_close()" class="w3-bar-item w3-button"></a>
   <a href="events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+
   <!--<a href="resources.html" onclick="w3_close()" class="w3-bar-item w3-button">Resources</a>-->
   <a href="member.html" onclick="w3_close()" class="w3-bar-item w3-button">Members</a>
 </nav>
@@ -452,7 +473,7 @@ h3 {
         <p></p>
         <h2 class="text-large-40 text-transform-uppercase font-weight-600 color-black">Events</h2>
   &nbsp;&nbsp;
-        <h5 class="karla font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Adelaide Blockchain hosts a vairiety of events including lectures, workshops and networking activities, as well as partners with and co-hosts blockchain conferences and hackathons year round!
+        <h5 class="karla font-weight-300 text-medium-22 margin-bottom-45 color-bright-gray">Adelaide Blockchain hosts a vairiety of events including, workshops and networking activities, as well as partners with and co-hosts blockchain conferences and hackathons year round!
 
 
 </h5>
@@ -472,6 +493,37 @@ h3 {
 
 <h2 style="text-align: center;" class="carisma text-large-40 text-transform-uppercase font-weight-600 color-black">Upcoming Events</strong></h2>&nbsp;&nbsp;&nbsp;
 
+
+<div class="container">
+  <div class="center"></div>
+
+<div class="wp-block-columns alignwide has-2-columns" style="max-width: 1000px" style = "position: absolute; top:50%; left: 50%;">
+<div class="wp-block-column">
+<figure class="wp-block-image"><img src="assets/futureofbtc.jpg" alt="Workshop" class="wp-image-136" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+<div class="wp-block-column karla" style="max-width: 1000px">
+<h3><strong>Future of Bitcoin with Rusty Russell</strong></h3>
+
+
+
+<p>Talks on current developments with Bitcoin and the Lightning Network, including current controversies and challenges with Rusty Russell, a globally recognised FOSS advocate and Senior Software Engineer at Blockstream.</p>
+
+
+
+<p>🌐 Where: Level 2 14 Grenfell Street, Adelaide SA 5000 <br>📆️ When: April 3rd <br>💻 Link: <a href="https://www.facebook.com/events/2029349087366997/">https://www.facebook.com/events/2029349087366997//</a><br>🎟️ Student Tickets: FREE<br>🎟️ Regular Tickets: FREE</p>
+</div>
+</div>
+
+
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h2 style="text-align: center;" class="text-large-40 text-transform-uppercase font-weight-600 color-black">Past Events</strong></h2>&nbsp;&nbsp;&nbsp;
 
 
 <div class="container">
@@ -499,11 +551,6 @@ h3 {
 
 
 
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h2 style="text-align: center;" class="text-large-40 text-transform-uppercase font-weight-600 color-black">Past Events</strong></h2>&nbsp;&nbsp;&nbsp;
 
 
 <div class="wp-block-columns alignwide has-2-columns" style="max-width: 1000px" style = "position: absolute; top:50%; left: 50%;">
@@ -604,6 +651,55 @@ More info on the provided link below!</p>
 </div>
 </div></article></main></div></div><div class="footer-widgets" id="genesis-footer-widgets">
   
+
+ <!-- Footer -->
+<footer class="font-small unique-color-dark pt-4" style="padding-top: 20px; text-align: center;">
+
+    <div class="footer-social-icons" style="text-align: center; margin-right: 46px; margin-bottom: 24px;">
+    <h4 class="karla" style="font-size: 32px; color: white; margin-left: 36px;"><b>Follow us on<b></h4>
+    <ul class="social-icons">
+        <li><a href="https://www.facebook.com/adelaideblockchain" class="social-icon"> <i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com/adelblockchain" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/adelaideblockchain/" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://www.meetup.com/Adelaide-Blockchain/" class="social-icon"> <i class="fab fa-meetup"></i></a></li>
+        
+    </ul>
+</div>
+
+
+   <h4 style="padding-top: 10px; color: white; font-size: 25px; text-align: center; margin-top: 10px;"> Become a part of Adelaide Blockchain</h4>
+      <a href="member.html" class="button button-member" style="font-size: 22px; margin-top: 10px; margin-bottom: 20px; width:60%"> JOIN HERE
+        <img style="width: auto; height: 40px; margin-bottom: 6px;"></img>
+      </a><br>
+    <!-- Footer Elements -->
+
+
+    <div class="container">
+
+      <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1" style="color: white">Have any questions?</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="mailto:contact@adelaideblockchain.org.au" style="color: white" class="btn  btn-rounded">Contact Us!</a>
+      </li>
+    </ul>
+    <br><br>
+      <!-- Call to action -->
+
+    </div>
+    <!-- Footer Elements stle -->
+
+    <!-- Copyright -->
+ <div class="footer-copyright text-center py-3" style="color: white">© 2019 Copyright:
+      <a href="https://adelaideblockchain.org.au" style="color:white">Adelaide Blockchain</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
 </body></html>
 
 </div>
